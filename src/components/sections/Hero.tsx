@@ -15,6 +15,8 @@ import { profileData } from "../../data/profile";
 import { cn } from "../../lib/utils";
 
 export function Hero() {
+  const profileImageUrl = `${import.meta.env.BASE_URL}uploads/photo-1777006151341.jpg`;
+
   // Mapping icons to tags
   const getTagIcon = (tag: string) => {
     switch (tag) {
@@ -132,7 +134,7 @@ export function Hero() {
               className="profile-star-inside relative w-full rounded-[26px] overflow-hidden aspect-[4/4.45] shadow-xl transition-all duration-500 group hover:shadow-2xl"
             >
               <img
-                src="/uploads/photo-1777006151341.jpg"
+                src={profileImageUrl}
                 alt={profileData.name}
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
               />

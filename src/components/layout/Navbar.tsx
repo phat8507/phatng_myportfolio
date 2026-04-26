@@ -9,6 +9,7 @@ interface NavbarProps {
 export function Navbar({ onOpenCommand }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -87,8 +88,8 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
             <div className="flex items-center gap-3 pl-6 border-l border-[#D8E1EC]">
               {/* Download CV */}
               <a
-                href="/Phat_Nguyen_CV.pdf"
-                download
+                href={cvUrl}
+                download="Phat_Nguyen_CV.pdf"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0F2A4A] text-white text-[0.8rem] font-bold transition-all hover:bg-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20"
               >
                 <Download size={14} />
@@ -142,8 +143,8 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
           
           <div className="pt-6 border-t border-[#D8E1EC]">
             <a
-              href="/Phat_Nguyen_CV.pdf"
-              download
+              href={cvUrl}
+              download="Phat_Nguyen_CV.pdf"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#0F2A4A] text-white font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >

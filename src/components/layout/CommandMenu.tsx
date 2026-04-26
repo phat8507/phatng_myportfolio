@@ -16,11 +16,12 @@ interface CommandMenuProps {
 export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
 
   const commands: Command[] = [
     { title: 'View Projects', sub: 'Jump to project case studies', key: '#projects', action: () => { window.location.hash = 'projects'; } },
     { title: 'Copy Email', sub: 'nhtruongphat.forwork@gmail.com', key: 'copy', action: () => { navigator.clipboard.writeText('nhtruongphat.forwork@gmail.com'); alert('Email copied!'); } },
-    { title: 'Download CV', sub: 'Open or download Phat Nguyen CV PDF', key: 'cv', action: () => window.open('/Phat_Nguyen_CV.pdf', '_blank') },
+    { title: 'Download CV', sub: 'Open or download Phat Nguyen CV PDF', key: 'cv', action: () => window.open(cvUrl, '_blank') },
     { title: 'Open LinkedIn', sub: 'linkedin.com/in/nhtruongphat', key: 'link', action: () => window.open('https://linkedin.com/in/nhtruongphat', '_blank') },
     { title: 'Open GitHub', sub: 'github.com/phat8507', key: 'link', action: () => window.open('https://github.com/phat8507', '_blank') },
     { title: 'Open Scrum/MBO Sheet', sub: 'Management sheet for the macroeconomics project', key: 'sheet', action: () => window.open('https://docs.google.com/spreadsheets/d/1J7qV3jRL2DzsedPfVXcWpT1usXZqI-f6/edit?usp=sharing&ouid=115062449513822083905&rtpof=true&sd=true', '_blank') },

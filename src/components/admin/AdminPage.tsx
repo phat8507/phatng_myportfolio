@@ -1,6 +1,7 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
 import { Check, Copy, Eye, EyeOff, Lock, RotateCcw } from "lucide-react";
 import { projectsData } from "../../data/projects";
+import type { ProjectData } from "../../data/projects";
 
 type AdminMode = "add" | "edit";
 type ProjectCategory = "research" | "event" | "leadership";
@@ -98,7 +99,7 @@ const splitLines = (value: string) =>
 
 const quote = (value: string) => JSON.stringify(value);
 
-const projectToDraft = (project: any): ProjectDraft => ({
+const projectToDraft = (project: ProjectData): ProjectDraft => ({
   id: project.id ?? "",
   category: project.category ?? "research",
   type: project.type ?? "",
@@ -250,12 +251,11 @@ export function AdminPage() {
   useEffect(() => {
     if (mode === "edit" && selectedProject) {
       const savedEdit = loadJson<{ selectedProjectId?: string; draft?: ProjectDraft }>(EDITED_PROJECT_DRAFT_KEY);
+      const nextDraft = savedEdit?.selectedProjectId === selectedProject.id && savedEdit.draft
+        ? { ...initialDraft, ...savedEdit.draft }
+        : projectToDraft(selectedProject);
 
-      if (savedEdit?.selectedProjectId === selectedProject.id && savedEdit.draft) {
-        setDraft({ ...initialDraft, ...savedEdit.draft });
-      } else {
-        setDraft(projectToDraft(selectedProject));
-      }
+      window.setTimeout(() => setDraft(nextDraft), 0);
     }
   }, [mode, selectedProject]);
 

@@ -5,6 +5,10 @@ interface IntroPreloaderProps {
   onComplete: () => void;
 }
 
+type PausableAnimation = {
+  pause?: () => void;
+} | null;
+
 export function IntroPreloader({ onComplete }: IntroPreloaderProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const wordmarkRef = useRef<HTMLDivElement>(null);
@@ -16,12 +20,12 @@ export function IntroPreloader({ onComplete }: IntroPreloaderProps) {
     let finished = false;
     let running = true;
 
-    let gridAnimation: any = null;
-    let titleInAnimation: any = null;
-    let subtitleInAnimation: any = null;
-    let accentInAnimation: any = null;
-    let wordmarkOutAnimation: any = null;
-    let overlayOutAnimation: any = null;
+    let gridAnimation: PausableAnimation = null;
+    let titleInAnimation: PausableAnimation = null;
+    let subtitleInAnimation: PausableAnimation = null;
+    let accentInAnimation: PausableAnimation = null;
+    let wordmarkOutAnimation: PausableAnimation = null;
+    let overlayOutAnimation: PausableAnimation = null;
 
     function finish() {
       if (finished) return;

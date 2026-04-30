@@ -8,7 +8,7 @@ export function Education() {
       <div className="section-container max-w-[1080px]">
         <header className="education-header mb-9 lg:mb-10">
           <h2 className="font-display text-[clamp(1.9rem,4vw,3.45rem)] font-bold leading-[1.04] tracking-tight text-[#0F2A4A]">
-            Education & Recognition
+            Education & Certifications
           </h2>
           <span className="education-header-line" aria-hidden="true" />
         </header>

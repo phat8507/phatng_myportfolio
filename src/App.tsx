@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
+import { ImpactSnapshot } from './components/sections/ImpactSnapshot';
 import { About } from './components/sections/About';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
@@ -67,9 +68,10 @@ function App() {
 
           <main>
             <Hero />
+            <ImpactSnapshot />
             <About />
-            <Experience />
             <Projects />
+            <Experience />
             <Skills />
             <Education />
             <Contact />

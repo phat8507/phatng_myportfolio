@@ -49,7 +49,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
   useEffect(() => {
     if (isOpen) {
       setTimeout(() => inputRef.current?.focus(), 30);
-      setQuery("");
+      setTimeout(() => setQuery(""), 0);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';

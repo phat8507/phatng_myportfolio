@@ -1,9 +1,10 @@
 import { X, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+import type { ProjectData, ProjectLink } from "../../data/projects";
 
 interface ProjectModalProps {
-  project: any | null;
+  project: ProjectData | null;
   onClose: () => void;
 }
 
@@ -44,6 +45,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <button 
                 onClick={onClose}
                 className="w-8 h-8 rounded-full bg-border flex items-center justify-center transition-colors hover:bg-border-dark pointer-events-auto text-text"
+                aria-label="Close project modal"
               >
                 <X size={16} />
               </button>
@@ -58,6 +60,20 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <div className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-accent mb-2">{project.type}</div>
                 <h2 className="font-display text-[1.6rem] font-bold leading-[1.2] tracking-tight text-text mb-1.5">{project.title}</h2>
                 <div className="text-[0.85rem] text-muted mb-6">{project.role}</div>
+                {project.highlights && project.highlights.length > 0 && (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                    {project.highlights.map((item: string) => (
+                      <div
+                        key={item}
+                        className="rounded-[10px] border border-[#D8E1EC] bg-white/70 px-3 py-2 text-center shadow-[0_2px_10px_rgba(15,42,74,0.035)]"
+                      >
+                        <span className="block text-[0.72rem] font-bold text-[#2563EB] leading-snug">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </motion.div>
 
               <motion.div
@@ -101,7 +117,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <div className="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-muted mb-[0.6rem] flex items-center gap-2 after:content-[''] after:flex-1 after:h-[1px] after:bg-border">
                   Outcomes
                 </div>
-                <div className="bg-accent-soft border border-border rounded-[6px] p-[0.9rem_1.1rem] text-[0.87rem] text-accent font-semibold leading-[1.6]">
+                <div className="bg-[#F0F5FF] border border-[rgba(37,99,235,0.22)] rounded-[10px] p-[1rem_1.15rem] text-[0.9rem] text-[#0F2A4A] font-semibold leading-[1.65] shadow-[0_2px_12px_rgba(15,42,74,0.035)]">
                   {project.outcomes}
                 </div>
               </motion.div>
@@ -137,7 +153,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       Project Links
                     </div>
                     <div className="flex flex-wrap gap-2 mt-1">
-                      {project.links.map((link: any, i: number) => (
+                      {project.links.map((link: ProjectLink, i: number) => (
                         <a 
                           key={i} 
                           href={link.url} 

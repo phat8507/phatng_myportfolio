@@ -2,19 +2,19 @@ export const educationData = [
   {
     school: "Banking University of Ho Chi Minh City",
     degree: "Bachelor of Business Administration",
-    detail: "E-Business Orientation · 2025 – Present",
+    detail: "E-Business Orientation - 2025 - Present",
     highlight: false
   },
   {
-    school: "Google · In Progress",
-    degree: "Google Project Management Certificate",
-    detail: "Coursera · Scrum & CAPM/PMP direction",
+    school: "SCRUMstudy",
+    degree: "Scrum Fundamentals Certified (SFC)",
+    detail: "Completed",
     highlight: true
   },
   {
-    school: "Agile · Learning",
-    degree: "Scrum Framework",
-    detail: "Self-study applied in academic team projects",
+    school: "Coursera",
+    degree: "Google Project Management Certificate",
+    detail: "In Progress",
     highlight: true
   }
 ];
@@ -22,17 +22,17 @@ export const educationData = [
 export const awardsData = [
   {
     num: "01",
-    title: "First Prize — English Public Speaking Competition",
-    sub: "Duong Van Thi High School · 2024"
+    title: "First Prize - English Public Speaking Competition",
+    sub: "Duong Van Thi High School - 2024"
   },
   {
     num: "02",
-    title: "Bronze Medal — HCMC Student Sports Championship",
-    sub: "Volleyball · 2025"
+    title: "Bronze Medal - HCMC Student Sports Championship",
+    sub: "Volleyball - 2025"
   },
   {
     num: "03",
-    title: "Third Prize — HCMC Physics Gifted Student Exam",
-    sub: "Ho Chi Minh City · 2022"
+    title: "Third Prize - HCMC Physics Gifted Student Exam",
+    sub: "Ho Chi Minh City - 2022"
   }
 ];

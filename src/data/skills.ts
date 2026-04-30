@@ -1,40 +1,61 @@
 export const skillsData = [
   {
-    category: "Business & Project Coordination",
-    skills: ["Planning", "Task Prioritization", "Timeline Coordination", "Documentation", "Event Logistics", "Stakeholder Communication", "Recruitment"]
+    category: "Project & Operations",
+    skills: [
+      "Scrum Fundamentals Certified (SFC)",
+      "Sprint Planning",
+      "Task Tracking",
+      "Timeline Coordination",
+      "Documentation",
+      "Reporting",
+      "Event Logistics"
+    ]
   },
   {
-    category: "Research & Analysis",
-    skills: ["Desk Research", "Case Study Analysis", "Market Research", "Problem Structuring", "Report Writing", "Data Synthesis"]
+    category: "People & HR Support",
+    skills: [
+      "Onboarding",
+      "Recruitment Coordination",
+      "Retention Follow-up",
+      "Stakeholder Communication",
+      "Client Management"
+    ]
   },
   {
-    category: "Communication",
-    skills: ["Public Speaking", "Client Communication", "Teaching", "Feedback Delivery", "Cross-team Coordination", "Partnership Outreach"]
+    category: "Research & Communication",
+    skills: [
+      "Desk Research",
+      "Case Study Analysis",
+      "Report Writing",
+      "Public Speaking",
+      "Q&A Preparation",
+      "Debate Materials"
+    ]
   },
   {
-    category: "Tools & Software",
-    skills: ["Microsoft Office", "PowerPoint", "Google Workspace", "Canva", "CapCut", "GitHub Pages"]
+    category: "Tools",
+    skills: ["Microsoft Office", "Google Workspace", "Canva", "CapCut", "GitHub Pages"]
   }
 ];
 
 export const languagesData = [
   {
-    flag: "🇻🇳",
+    flag: "VN",
     name: "Vietnamese",
     level: "Native",
     badge: "Native"
   },
   {
-    flag: "🇬🇧",
+    flag: "EN",
     name: "English",
-    level: "Professional Working",
+    level: "IELTS 7.5 / Professional Working",
     badge: "IELTS 7.5",
     gold: true
   },
   {
-    flag: "🇨🇳",
+    flag: "ZH",
     name: "Mandarin",
-    level: "Learning · HSK 3–4",
-    badge: "In Progress"
+    level: "Learning / HSK 3-4 direction",
+    badge: "Learning"
   }
 ];

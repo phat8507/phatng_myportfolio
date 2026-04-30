@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Search } from "lucide-react";
+import type { ProjectData } from "../../data/projects";
 import { projectsData } from "../../data/projects";
 import { ProjectCard } from "../project/ProjectCard";
 import { ProjectModal } from "../project/ProjectModal";
@@ -12,7 +13,7 @@ export function Projects() {
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   const filters = [
@@ -32,21 +33,12 @@ export function Projects() {
   }, [filter, search]);
 
   const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
+  const safeCurrentPage = totalPages > 0 ? Math.min(currentPage, totalPages) : 1;
 
   const paginatedProjects = useMemo(() => {
-    const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+    const startIndex = (safeCurrentPage - 1) * PROJECTS_PER_PAGE;
     return filteredProjects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
-  }, [currentPage, filteredProjects]);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filter, search]);
-
-  useEffect(() => {
-    if (totalPages > 0 && currentPage > totalPages) {
-      setCurrentPage(Math.max(1, totalPages));
-    }
-  }, [currentPage, totalPages]);
+  }, [safeCurrentPage, filteredProjects]);
 
   const handlePageChange = (page: number) => {
     if (page < 1 || page > totalPages) {
@@ -82,7 +74,10 @@ export function Projects() {
             {filters.map(f => (
               <button
                 key={f.id}
-                onClick={() => setFilter(f.id)}
+                onClick={() => {
+                  setFilter(f.id);
+                  setCurrentPage(1);
+                }}
                 className={cn(
                   "px-[16px] py-[8px] rounded-full text-[0.8rem] font-bold transition-all",
                   filter === f.id 
@@ -102,7 +97,10 @@ export function Projects() {
               type="search"
               placeholder="Search projects..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setCurrentPage(1);
+              }}
               className="w-full py-[10px] pr-[16px] pl-[40px] rounded-full border border-[#D8E1EC] bg-[rgba(255,255,255,0.7)] text-[#0B1220] text-[0.85rem] font-medium outline-none transition-all focus:bg-white focus:border-[#2563EB] focus:shadow-[0_0_0_4px_rgba(37,99,235,0.1)] placeholder:text-[#5B6B82]"
             />
           </div>
@@ -129,7 +127,7 @@ export function Projects() {
         {totalPages > 1 && (
           <div className="mt-10">
             <NumberedPagination
-              currentPage={currentPage}
+              currentPage={safeCurrentPage}
               totalPages={totalPages}
               onPageChange={handlePageChange}
             />

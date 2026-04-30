@@ -1,9 +1,10 @@
 import { ExternalLink, Medal, Folder, LayoutGrid, Users } from "lucide-react";
+import type { ProjectData } from "../../data/projects";
 import { cn } from "../../lib/utils";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 
 interface ProjectCardProps {
-  project: any;
+  project: ProjectData;
   onClick: () => void;
 }
 
@@ -98,7 +99,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
 
           <div className="text-[0.8rem] font-bold text-[#2563EB] flex items-center gap-1 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-            Details <span>→</span>
+            Details <span>-&gt;</span>
           </div>
         </div>
 

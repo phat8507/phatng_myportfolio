@@ -1,8 +1,8 @@
 export const profileData = {
   name: "Phat Nguyen",
-  viName: "Nguyen Huu Truong Phat",
+  viName: "Nguyễn Hữu Trường Phát",
   headline: "Project Coordination & People Operations Portfolio",
-  heroDescription: "Business Administration student focused on project coordination, operations, and HR support. I turn messy team work into structured workflows: planning tasks, tracking progress, coordinating stakeholders, documenting outcomes, and supporting onboarding.",
+  heroDescription: "Business Administration student focused on project coordination, operations, and HR support. I turn team workflows into structured plans: task planning, progress tracking, stakeholder coordination, documentation, and onboarding support.",
   location: "Ho Chi Minh City, Vietnam",
   status: "Open to Internships",
   targets: [

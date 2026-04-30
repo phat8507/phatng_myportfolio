@@ -56,16 +56,19 @@ export function Hero() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 rounded-full bg-[#2563EB] shadow-[0_0_8px_rgba(37,99,235,0.4)] animate-pulse" />
               <span className="text-[0.68rem] font-bold tracking-[0.18em] uppercase text-[#5B6B82]">
-                {profileData.status} - {profileData.location}
+                {profileData.status} · {profileData.location}
               </span>
             </div>
 
             <div className="mb-4">
-              <h1 className="font-display text-[clamp(2.55rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-[#0B1220] max-w-[680px]">
-                {profileData.headline}
-              </h1>
-              <p className="text-[clamp(1.15rem,2vw,1.45rem)] font-playfair italic mt-2 text-[#2563EB]">
+              <h1 className="font-display text-[clamp(2.8rem,5.5vw,4.2rem)] font-bold leading-[1.05] tracking-tight text-[#0B1220] max-w-[680px]">
                 {profileData.name}
+              </h1>
+              <p className="text-[clamp(1.25rem,2.2vw,1.6rem)] font-playfair italic mt-1.5 text-[#2563EB]">
+                {profileData.viName}
+              </p>
+              <p className="mt-3 text-[0.8rem] sm:text-[0.85rem] font-bold uppercase tracking-[0.16em] text-[#5B6B82]">
+                {profileData.headline}
               </p>
             </div>
 

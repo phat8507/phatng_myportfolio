@@ -68,7 +68,7 @@ export function Experience() {
               viewport={viewportReveal}
             >
               {experienceData.map((_, i) => (
-                <motion.div key={i} variants={staggerItem} className="relative z-10 w-10 h-10 rounded-full bg-white border border-[#D8E1EC] flex items-center justify-center shadow-[0_2px_8px_rgba(15,42,74,0.04)] mb-auto last:mb-0">
+                <motion.div key={i} variants={staggerItem} className="relative z-10 w-10 h-10 rounded-full timeline-marker flex items-center justify-center mb-auto last:mb-0">
                   {iconMap[i] || <div className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />}
                 </motion.div>
               ))}
@@ -87,7 +87,7 @@ export function Experience() {
               <motion.div key={i} variants={staggerItem}>
                 <SignInCardBeamEffect
                   enableTilt={false}
-                  className="motion-card bg-white border border-[#D8E1EC] rounded-[14px] shadow-[0_2px_14px_rgba(15,42,74,0.055)] overflow-hidden"
+                  className="experience-card motion-card overflow-hidden"
                 >
                   <div className="p-5 md:p-6 relative z-10 flex flex-col">
                   
@@ -103,7 +103,7 @@ export function Experience() {
                     </div>
                     
                     {/* Date Badge */}
-                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#F0F5FF] text-[#2563EB] text-[0.68rem] font-medium border border-[#D8E1EC] shrink-0 self-start">
+                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[rgba(240,245,255,0.82)] text-[#2563EB] text-[0.68rem] font-medium border border-[rgba(255,255,255,0.72)] backdrop-blur-sm shrink-0 self-start">
                       <Calendar size={12} className="opacity-70" />
                       {exp.date}
                     </div>
@@ -124,7 +124,7 @@ export function Experience() {
                     {exp.tags.map(tag => (
                       <span
                         key={tag}
-                        className="inline-block px-[10px] py-[3px] rounded-full text-[0.65rem] font-medium text-[#2563EB] bg-white border border-[#D8E1EC] transition-colors hover:bg-[#F0F5FF]"
+                        className="inline-block px-[10px] py-[3px] rounded-full text-[0.65rem] font-medium text-[#2563EB] bg-[rgba(255,255,255,0.80)] border border-[rgba(255,255,255,0.70)] backdrop-blur-sm transition-colors hover:bg-[rgba(240,245,255,0.88)]"
                       >
                         {tag}
                       </span>

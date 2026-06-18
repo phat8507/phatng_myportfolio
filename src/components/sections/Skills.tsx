@@ -71,7 +71,7 @@ export function Skills() {
               >
                 <SignInCardBeamEffect
                   enableTilt={false}
-                  className="skill-card motion-card bg-white border border-[#D8E1EC] rounded-[16px] shadow-[0_2px_16px_rgba(15,42,74,0.06)] overflow-hidden"
+                  className="skill-card motion-card overflow-hidden"
                   data-cursor="hover"
                 >
                   <div className="p-7 flex flex-col h-full relative z-10">

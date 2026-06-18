@@ -28,8 +28,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
     <SignInCardBeamEffect
       enableTilt={true}
       className={cn(
-        "project-card cursor-pointer bg-white border border-[#D8E1EC] rounded-[16px] overflow-hidden shadow-[0_4px_20px_rgba(15,42,74,0.04)]",
-        "motion-card hover:shadow-[0_12px_34px_rgba(15,42,74,0.10)] hover:border-[#2563EB] hover:-translate-y-1 transition-all duration-300"
+        "project-card cursor-pointer glass-card rounded-[16px] overflow-hidden",
+        "motion-card hover:shadow-[0_12px_34px_rgba(15,42,74,0.10)] hover:border-[#2563EB] transition-all duration-300"
       )}
       data-cursor="hover"
       onClick={onClick}

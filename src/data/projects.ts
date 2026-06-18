@@ -79,18 +79,18 @@ export const projectsData: ProjectData[] = [
     medal: null,
     title: "Youth for Chance Club - \"Shared to Lead\" Talkshow",
     role: "External Relations & Event Communications",
-    highlights: ["Event logistics", "Partnership outreach", "Communication planning"],
-    overview: "Supported operations, external relations, and event communications for Youth for Chance, a student organization focused on leadership development and social impact.",
+    highlights: ["Multi-division coordination", "Partnership outreach", "End-to-end logistics", "Post-event documentation"],
+    overview: "Coordinated external relations, event communications, and logistics for Youth for Chance's 'Shared to Lead' leadership talkshow — managing partner outreach, cross-division communication, and on-ground execution from planning through post-event review.",
     responsibilities: [
-      "Supported event logistics planning, timeline drafting, task allocation, and on-ground coordination across teams.",
-      "Drafted partnership outreach communications and assisted external relations with partner organizations and speakers.",
-      "Coordinated internal communication between club divisions to keep messaging and task follow-through consistent.",
-      "Supported on-ground execution during the talkshow, including logistics checks and attendee flow.",
-      "Documented event outcomes and lessons learned for post-event review."
+      "Planned event logistics, drafted the production timeline, allocated tasks across team divisions, and tracked follow-through.",
+      "Authored partnership outreach communications and managed external relations with partner organizations and guest speakers.",
+      "Coordinated internal messaging across club divisions to ensure consistent task ownership and deadline adherence.",
+      "Supported on-ground execution on event day, including logistics checks, material preparation, and attendee flow management.",
+      "Documented event outcomes, operational gaps, and lessons learned for post-event review and future planning reference."
     ],
-    outcomes: "Supported successful execution of the leadership-focused student talkshow while building practical experience in event logistics, partnership outreach, communication planning, and on-ground coordination.",
-    tags: ["Event Logistics", "External Relations", "Partnership Outreach", "Communication Planning", "On-ground Coordination"],
-    cardTags: ["Event Logistics", "Partnerships", "Communication"],
-    cardDesc: "Supported event logistics, partnership outreach, communication planning, and on-ground coordination for a leadership-focused student talkshow."
+    outcomes: "Delivered end-to-end event coordination — from timeline planning and partner outreach to on-ground execution and post-event documentation — for a live leadership-focused student talkshow. Built cross-functional coordination, stakeholder communication, and logistics planning experience in a real event environment.",
+    tags: ["Event Logistics", "External Relations", "Partnership Outreach", "Communication Planning", "On-ground Coordination", "Timeline Planning", "Post-event Documentation"],
+    cardTags: ["Event Logistics", "Partnerships", "Cross-Division Coordination"],
+    cardDesc: "Managed partnership outreach, cross-division communication, production timeline, and on-ground execution for a live leadership-focused student talkshow end-to-end."
   }
 ];

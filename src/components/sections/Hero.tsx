@@ -6,7 +6,8 @@ import {
   Calendar,
   Globe,
   BookOpen,
-  ClipboardList
+  ClipboardList,
+  Trophy
 } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { MouseEvent } from "react";
@@ -43,10 +44,10 @@ export function Hero() {
 
   const getStatIcon = (label: string, iconSize = 18) => {
     switch (label) {
-      case "IELTS": return <Globe size={iconSize} className="text-[#2563EB]" />;
-      case "Scrum": return <BookOpen size={iconSize} className="text-[#2563EB]" />;
-      case "Project": return <ClipboardList size={iconSize} className="text-[#2563EB]" />;
-      case "Club": return <Users size={iconSize} className="text-[#2563EB]" />;
+      case "Score": return <Trophy size={iconSize} className="text-[#2563EB]" />;
+      case "Participation": return <Users size={iconSize} className="text-[#2563EB]" />;
+      case "Scale": return <Users size={iconSize} className="text-[#2563EB]" />;
+      case "English": return <Globe size={iconSize} className="text-[#2563EB]" />;
       default: return null;
     }
   };
@@ -154,7 +155,7 @@ export function Hero() {
                     {profileData.name}
                   </div>
                   <div className="text-[0.64rem] font-medium text-[#5B6B82] mt-0.5 truncate">
-                    BAdmin - E-Business - Freshman
+                    BAdmin - E-Business · Class of 2029
                   </div>
                 </div>
                 <div className="shrink-0 flex items-center">

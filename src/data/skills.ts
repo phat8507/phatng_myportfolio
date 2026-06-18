@@ -28,6 +28,8 @@ export const skillsData = [
       "Microsoft Word",
       "Microsoft PowerPoint",
       "Google Sheets",
+      "Trello",
+      "Notion",
       "Canva",
       "CapCut"
     ]

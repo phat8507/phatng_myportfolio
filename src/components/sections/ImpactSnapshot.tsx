@@ -10,24 +10,24 @@ import {
 
 const impactItems = [
   {
-    icon: ClipboardCheck,
-    title: "8-member Scrum project",
-    text: "Coordinated 3 offline sprint sessions and milestone tracking."
+    icon: Trophy,
+    title: "9/10 Faculty Score",
+    text: "Led an 8-member Scrum team across 3 sprint sessions to top research delivery with a Google Sheets dashboard."
   },
   {
     icon: Users,
-    title: "50-member club",
-    text: "Oversaw weekly operations, resources, and internal communications."
+    title: "85% Active Rate",
+    text: "Maintained 85% active participation after a structured member intake for a 50-member athletics club."
   },
   {
     icon: Landmark,
-    title: "15 institutions",
-    text: "Managed inter-school tournament logistics and head coach communication."
+    title: "15 Institutions",
+    text: "Managed inter-school tournament logistics, match scheduling, and head coach communication across 15 teams."
   },
   {
-    icon: Trophy,
-    title: "9/10 + Bronze Medal",
-    text: "Delivered measurable outcomes across research and athletics leadership."
+    icon: ClipboardCheck,
+    title: "Weekly Reporting — Active",
+    text: "Delivering structured stakeholder reporting across 2 concurrent paid teaching roles with 2 supervisors."
   }
 ];
 

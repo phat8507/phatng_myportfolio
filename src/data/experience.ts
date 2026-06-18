@@ -1,9 +1,10 @@
 export const experienceData = [
   {
-    title: "English as a Second Language (ESL) Teacher",
+    title: "ESL Teacher & Classroom Operations Coordinator",
     company: "The Sun English Center, Ho Chi Minh City, Vietnam",
     date: "Oct 2025 - Present",
     bullets: [
+      "Manage structured reporting, two concurrent class operations, and stakeholder communication — applying the same coordination disciplines used in Scrum environments.",
       "Maintain a structured weekly reporting cycle to 2 stakeholders: the supervising office and foreign English teacher.",
       "Document session outcomes, student progress status, and follow-up actions across active classes.",
       "Coordinate lesson delivery across 2 concurrent classes of 10-12 students each, ages 12-17.",

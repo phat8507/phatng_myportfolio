@@ -20,7 +20,7 @@ export const educationData = [
   {
     school: "Coursera",
     degree: "Google Project Management Certificate",
-    detail: "In Progress - Expected Q3/2026",
+    detail: "In Progress - Expected Aug 2026",
     highlight: true
   }
 ];

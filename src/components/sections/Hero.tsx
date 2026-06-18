@@ -92,7 +92,7 @@ export function Hero() {
 
             <motion.div className="flex flex-wrap gap-2 mb-10 max-w-[620px]" variants={staggerItem}>
               {profileData.targets.map((tag) => (
-                <span key={tag} className="tag flex items-center gap-2 py-2 px-4 bg-white/60 backdrop-blur-sm border-[#D8E1EC] text-[0.75rem] font-bold text-[#5B6B82] rounded-full hover:border-[#2563EB] hover:text-[#2563EB] transition-all cursor-default shadow-sm">
+                <span key={tag} className="tag flex items-center gap-2 py-2 px-4 text-[0.75rem] font-bold text-[#5B6B82] rounded-full hover:border-[#2563EB] hover:text-[#2563EB] transition-all cursor-default">
                   <span className="text-[#2563EB]/80">{getTagIcon(tag)}</span>
                   {tag}
                 </span>
@@ -113,7 +113,7 @@ export function Hero() {
               <a
                 href={cvUrl}
                 download="Phat_Nguyen_CV.pdf"
-                className="motion-button inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white border border-[#D8E1EC] text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-sm active:translate-y-0"
+                className="motion-button inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[rgba(255,255,255,0.82)] border border-[rgba(255,255,255,0.74)] backdrop-blur-sm text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(15,42,74,0.06),inset_0_1.5px_0_rgba(255,255,255,0.92)] active:translate-y-0"
               >
                 <Download size={16} />
                 Download CV
@@ -121,7 +121,7 @@ export function Hero() {
 
               <a
                 href="#contact"
-                className="motion-button inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white border border-[#D8E1EC] text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-sm active:translate-y-0"
+                className="motion-button inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-[rgba(255,255,255,0.82)] border border-[rgba(255,255,255,0.74)] backdrop-blur-sm text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(15,42,74,0.06),inset_0_1.5px_0_rgba(255,255,255,0.92)] active:translate-y-0"
               >
                 <Mail size={16} />
                 Contact Me
@@ -143,7 +143,7 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/40 via-transparent to-transparent" />
 
-              <div className="glass-card absolute bottom-3.5 left-3.5 right-3.5 z-[2] rounded-[15px] p-2.5 flex items-center gap-2.5 border-white/30 backdrop-blur-xl">
+              <div className="glass-card glass-card--elevated glass-noise absolute bottom-3.5 left-3.5 right-3.5 z-[2] rounded-[15px] p-2.5 flex items-center gap-2.5">
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center font-display text-[0.84rem] font-bold text-white shrink-0 shadow-md"
                   style={{ background: "linear-gradient(135deg, #0F2A4A, #2563EB)" }}
@@ -166,7 +166,7 @@ export function Hero() {
 
             <div className="grid w-full grid-cols-2 auto-rows-[78px] gap-2.5">
               {profileData.stats.map((stat) => (
-                <div key={stat.label} className="hero-stat-card glass-card h-full rounded-[13px] p-2.5 border-[#D8E1EC]/50 group flex flex-col justify-between">
+                <div key={stat.label} className="hero-stat-card glass-card h-full rounded-[13px] p-2.5 group flex flex-col justify-between">
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-7 h-7 rounded-lg bg-[#2563EB]/5 flex items-center justify-center transition-colors group-hover:bg-[#2563EB]/10">
                       {getStatIcon(stat.label, 16)}

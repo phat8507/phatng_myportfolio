@@ -73,7 +73,7 @@ export function ImpactSnapshot() {
               <motion.div key={item.title} variants={staggerItem}>
                 <SignInCardBeamEffect
                   enableTilt={false}
-                  className="motion-card bg-white/80 border border-[#D8E1EC] rounded-[14px] shadow-[0_2px_14px_rgba(15,42,74,0.045)] overflow-hidden"
+                  className="impact-card motion-card overflow-hidden"
                   data-cursor="hover"
                 >
                   <article className="relative z-10 p-5 h-full">

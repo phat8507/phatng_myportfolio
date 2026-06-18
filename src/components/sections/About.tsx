@@ -59,7 +59,7 @@ export function About() {
           whileInView="visible"
           viewport={viewportReveal}
         >
-          <motion.div className="about-facts-card bg-white/75 border border-border rounded-[14px] overflow-hidden shadow-[0_18px_44px_rgba(15,42,74,0.055)] backdrop-blur-sm" variants={staggerItem}>
+          <motion.div className="about-facts-card overflow-hidden" variants={staggerItem}>
             {about.snapshot.map((row, idx) => (
               <div 
                 key={row.key} 

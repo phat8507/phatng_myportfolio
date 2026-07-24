@@ -65,12 +65,24 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
         </h3>
 
         {/* 5. Description */}
-        <p className="text-[0.9rem] text-[#5B6B82] leading-[1.6] mb-6 flex-1">
+        <p className="text-[0.9rem] text-[#5B6B82] leading-[1.6] mb-5">
           {project.cardDesc}
         </p>
 
+        {/* 5b. Key highlights */}
+        {project.highlights && project.highlights.length > 0 && (
+          <ul className="flex flex-col gap-2 mb-6">
+            {project.highlights.map((item) => (
+              <li key={item} className="flex items-center gap-2.5 text-[0.8rem] font-medium text-[#0F2A4A]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
         {/* 6. Tags */}
-        <div className="flex flex-wrap gap-[6px] mb-6">
+        <div className="flex flex-wrap gap-[6px] mb-6 mt-auto">
           {project.cardTags.map((tag: string) => (
             <span 
               key={tag} 

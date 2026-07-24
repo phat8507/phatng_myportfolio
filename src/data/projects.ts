@@ -27,7 +27,7 @@ export const projectsData: ProjectData[] = [
     id: "yflp-semifinal-marketing-case",
     category: "leadership",
     type: "Leadership Competition",
-    medal: "Best Team - Semi-Final",
+    medal: "Best Team",
     title: "YFLP Season 6 - Semi-Final (Marketing Case)",
     role: "Team Leader",
     highlights: ["Best Team - Semi-Final", "5-member team", "9-day sprint", "MBO + Scrum"],

@@ -40,7 +40,9 @@ export const projectsData: ProjectData[] = [
     ],
     outcomes: "Named Best Team of the Semi-Final and advanced to the grand final.",
     tags: ["Team Leadership", "MBO", "Scrum", "Risk Management", "Time Management", "Team Facilitation", "Marketing Case"],
-    links: [],
+    links: [
+      { label: "Outstanding Team Certificate", url: "https://drive.google.com/file/d/1qojWv2fHMPAiVMS0QZoE_9IUb7HpWhes/view" }
+    ],
     cardTags: ["Team Leadership", "Scrum & MBO", "Risk Management"],
     cardDesc: "Led a 5-member team through a 9-day Marketing Case sprint using MBO, Scrum, and risk planning - earning Best Team of the Semi-Final."
   },
@@ -61,7 +63,9 @@ export const projectsData: ProjectData[] = [
     ],
     outcomes: "Finished in the Top 5 of the grand final after leading a high-pressure strategic turnaround.",
     tags: ["Financial Modeling", "P&L Analysis", "Omni-channel Strategy", "Sales Strategy", "Crisis Management", "Public Speaking", "Business Case"],
-    links: [],
+    links: [
+      { label: "Top 5 Finalist Certificate", url: "https://drive.google.com/file/d/18qAAFOzj6m_ZurzHPORMsA7eZeehWbPX/view" }
+    ],
     cardTags: ["Finance & P&L", "Crisis Turnaround", "Public Speaking"],
     cardDesc: "As Vice Leader in the grand final, owned Finance, Omni-channel & Sales and helped rebuild the full strategy in 4 days after a crisis - finishing Top 5."
   },

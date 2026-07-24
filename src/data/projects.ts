@@ -24,25 +24,46 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
-    id: "yflp-season-6",
+    id: "yflp-semifinal-marketing-case",
     category: "leadership",
     type: "Leadership Competition",
-    medal: null,
-    title: "Youth Forchance Leadership Program (YFLP) - Season 6",
-    role: "Top 5 / 25 Finalists - Team Strategist",
-    highlights: ["Top 5 / 25 Finalists", "5-member team", "Outstanding Team", "Crisis Management"],
-    overview: "Competed in an internal leadership program focusing on organizational development and strategy. Collaborated with a 5-member team to design and present a comprehensive Learning & Development (L&D) framework tailored for a simulated 50-member club structure.",
+    medal: "Best Team - Semi-Final",
+    title: "YFLP Season 6 - Semi-Final (Marketing Case)",
+    role: "Team Leader",
+    highlights: ["Best Team - Semi-Final", "5-member team", "9-day sprint", "MBO + Scrum"],
+    overview: "The semi-final round of the YFC Future Leaders Program (Season 6), an annual leadership competition run by the Youth For Chance (YFC) club. As Team Leader, I guided a 5-member team through an intensive 9-day Marketing Case sprint - focusing less on having every answer and more on building the structure and space for the team to solve the problem together.",
     responsibilities: [
-      "Collaborated in a 5-member team to design a comprehensive Learning & Development (L&D) and HR strategy for a simulated 50-member club structure.",
-      "Built individual development plans, defined KPIs, and established performance evaluation criteria for diverse organizational roles.",
-      "Navigated a mid-project crisis when two team members withdrew, successfully redistributing workloads, resetting deadlines, and maintaining project momentum.",
-      "Presented the team's strategy to judges under pressure and delivered an inspiring closing speech."
+      "Led a 5-member team as Team Leader through a 9-day Marketing Case sprint under heavy time pressure.",
+      "Introduced lightweight structure - MBO for goal-setting, a Scrum rhythm for daily progress, and a risk plan - to protect the team's focus and energy against the deadline.",
+      "Facilitated collaborative problem-solving, creating space for every member to contribute instead of directing each decision.",
+      "Kept the team aligned and motivated through the most compressed stretch of the competition."
     ],
-    outcomes: "Earned an individual Top 5 of 25 ranking for performance and influence. Recognized as an Outstanding Team among 5 semifinal teams for resilience and strategic depth.",
-    tags: ["Learning & Development", "HR Strategy", "KPI Definition", "Crisis Management", "Public Speaking", "Performance Tracking", "Cross-Functional Collaboration"],
+    outcomes: "Named Best Team of the Semi-Final and advanced to the grand final.",
+    tags: ["Team Leadership", "MBO", "Scrum", "Risk Management", "Time Management", "Team Facilitation", "Marketing Case"],
     links: [],
-    cardTags: ["L&D Strategy", "Crisis Management", "Public Speaking"],
-    cardDesc: "Designed an organizational L&D strategy and navigated team turnover to earn an individual Top 5 of 25 ranking and an Outstanding Team recognition."
+    cardTags: ["Team Leadership", "Scrum & MBO", "Risk Management"],
+    cardDesc: "Led a 5-member team through a 9-day Marketing Case sprint using MBO, Scrum, and risk planning - earning Best Team of the Semi-Final."
+  },
+  {
+    id: "yflp-final-business-case",
+    category: "leadership",
+    type: "Leadership Competition",
+    medal: "Top 5 Finalist",
+    title: "YFLP Season 6 - Grand Final (Business Case)",
+    role: "Vice Leader",
+    highlights: ["Top 5 Finalist", "5-member team", "10-day sprint", "Full strategic pivot"],
+    overview: "The grand final of the YFC Future Leaders Program (Season 6). As Vice Leader of a 5-member team, I worked on a 10-day Business Case. Six days in, we realized we had misidentified the core problem and rebuilt the entire strategy from scratch in the final four days - turning a crisis into our strongest work.",
+    responsibilities: [
+      "Served as Vice Leader of a 5-member team on a 10-day Business Case sprint.",
+      "When the team discovered a misdiagnosed core problem six days in, helped drive a full reset and rebuild of the strategy in the final four days.",
+      "Owned the Finance, Omni-channel, and Sales workstreams - running the numbers, sizing channels, and defending a P&L that proved the strategic pivot was profitable, not just creative.",
+      "Delivered the closing 'Walk the Talk' inspiring speech on the final stage."
+    ],
+    outcomes: "Finished in the Top 5 of the grand final after leading a high-pressure strategic turnaround.",
+    tags: ["Financial Modeling", "P&L Analysis", "Omni-channel Strategy", "Sales Strategy", "Crisis Management", "Public Speaking", "Business Case"],
+    links: [],
+    cardTags: ["Finance & P&L", "Crisis Turnaround", "Public Speaking"],
+    cardDesc: "As Vice Leader in the grand final, owned Finance, Omni-channel & Sales and helped rebuild the full strategy in 4 days after a crisis - finishing Top 5."
   },
   {
     id: "scrum-managed-macroeconomics",

@@ -14,7 +14,6 @@ import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { IntroPreloader } from './components/ui/IntroPreloader';
 import { NeuralBackground } from './components/ui/neural-background';
-import { CustomCursor } from './components/ui/CustomCursor';
 import { AdminPage } from './components/admin/AdminPage';
 
 function App() {
@@ -59,7 +58,6 @@ function App() {
           speed={1}
         />
       </div>
-      <CustomCursor />
 
       {isAdminPage ? (
         <AdminPage />

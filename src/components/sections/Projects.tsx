@@ -14,7 +14,7 @@ import {
   viewportReveal,
 } from "../motion/variants";
 
-const PROJECTS_PER_PAGE = 6;
+const PROJECTS_PER_PAGE = 3;
 
 export function Projects() {
   const [filter, setFilter] = useState("all");

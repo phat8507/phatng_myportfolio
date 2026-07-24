@@ -36,17 +36,17 @@ export function SignInCardBeamEffect({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className={cn("relative", className)}
+      className={cn("relative h-full", className)}
       style={{ perspective: 1500 }}
     >
       <motion.div
-        className="relative"
+        className="relative h-full"
         style={enableTilt ? { rotateX, rotateY } : undefined}
         onMouseMove={enableTilt ? handleMouseMove : undefined}
         onMouseLeave={enableTilt ? handleMouseLeave : undefined}
         whileHover={enableTilt ? { z: 10 } : undefined}
       >
-        <div className="relative group" {...props}>
+        <div className="relative group h-full" {...props}>
           {/* B. Card glow layer — copied from source, adapted to Navy/Blue palette */}
           <motion.div
             className="absolute -inset-[1px] rounded-[inherit] opacity-0 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none"

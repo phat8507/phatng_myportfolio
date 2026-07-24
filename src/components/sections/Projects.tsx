@@ -136,7 +136,7 @@ export function Projects() {
           viewport={viewportReveal}
         >
           {paginatedProjects.map((project) => (
-            <motion.div key={project.id} variants={staggerItem}>
+            <motion.div key={project.id} variants={staggerItem} className="h-full">
               <ProjectCard
                 project={project}
                 onClick={() => setSelectedProject(project)}

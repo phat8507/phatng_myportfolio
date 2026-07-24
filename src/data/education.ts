@@ -28,11 +28,21 @@ export const educationData = [
 export const awardsData = [
   {
     num: "01",
+    title: "Top 5 Finalist - YFC Future Leaders Program 2026",
+    sub: "Grand Final - Business Case (Team Zenith) - Vice Leader"
+  },
+  {
+    num: "02",
+    title: "Best Team - Semi-Final, YFC Future Leaders Program 2026",
+    sub: "Marketing Case (Team Shift) - Team Leader"
+  },
+  {
+    num: "03",
     title: "First Prize - English Public Speaking Competition",
     sub: "Duong Van Thi High School - 2024"
   },
   {
-    num: "02",
+    num: "04",
     title: "Bronze Medal - HCMC Student Sports Championship",
     sub: "Volleyball - 2025"
   }

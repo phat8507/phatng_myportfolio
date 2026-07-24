@@ -1,12 +1,24 @@
 export const skillsData = [
   {
+    category: "Leadership & Communication",
+    skills: [
+      "Team Leadership",
+      "Crisis Management",
+      "Team Facilitation",
+      "Public Speaking",
+      "People Development",
+      "Stakeholder Communication"
+    ]
+  },
+  {
     category: "Project Coordination",
     skills: [
       "Project Coordination",
       "Agile/Scrum",
       "Deliverable & Milestone Tracking",
       "Cross-Functional Coordination",
-      "Stakeholder Communication",
+      "MBO & Goal-Setting",
+      "Risk Management",
       "Timeline Planning"
     ]
   },

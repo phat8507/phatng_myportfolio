@@ -24,6 +24,27 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
+    id: "yflp-season-6",
+    category: "leadership",
+    type: "Leadership Competition",
+    medal: null,
+    title: "Youth Forchance Leadership Program (YFLP) - Season 6",
+    role: "Top 5 / 25 Finalists - Team Strategist",
+    highlights: ["Top 5 / 25 Finalists", "5-member team", "Outstanding Team", "Crisis Management"],
+    overview: "Competed in an internal leadership program focusing on organizational development and strategy. Collaborated with a 5-member team to design and present a comprehensive Learning & Development (L&D) framework tailored for a simulated 50-member club structure.",
+    responsibilities: [
+      "Collaborated in a 5-member team to design a comprehensive Learning & Development (L&D) and HR strategy for a simulated 50-member club structure.",
+      "Built individual development plans, defined KPIs, and established performance evaluation criteria for diverse organizational roles.",
+      "Navigated a mid-project crisis when two team members withdrew, successfully redistributing workloads, resetting deadlines, and maintaining project momentum.",
+      "Presented the team's strategy to judges under pressure and delivered an inspiring closing speech."
+    ],
+    outcomes: "Earned an individual Top 5 of 25 ranking for performance and influence. Recognized as an Outstanding Team among 5 semifinal teams for resilience and strategic depth.",
+    tags: ["Learning & Development", "HR Strategy", "KPI Definition", "Crisis Management", "Public Speaking", "Performance Tracking", "Cross-Functional Collaboration"],
+    links: [],
+    cardTags: ["L&D Strategy", "Crisis Management", "Public Speaking"],
+    cardDesc: "Designed an organizational L&D strategy and navigated team turnover to earn an individual Top 5 of 25 ranking and an Outstanding Team recognition."
+  },
+  {
     id: "scrum-managed-macroeconomics",
     category: "research",
     type: "Academic Research",

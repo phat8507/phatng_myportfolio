@@ -13,7 +13,7 @@ import { CommandMenu } from './components/layout/CommandMenu';
 import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { IntroPreloader } from './components/ui/IntroPreloader';
-import { NeuralBackground } from './components/ui/neural-background';
+import { ModeReactiveBackground } from './components/ui/mode-reactive-background';
 import { AdminPage } from './components/admin/AdminPage';
 
 function App() {
@@ -48,15 +48,9 @@ function App() {
         <IntroPreloader onComplete={() => setPreloaderDone(true)} />
       )}
 
-      {/* ── Global NeuralBackground — fixed, behind all content ── */}
+      {/* ── Global mode-reactive background — fixed, behind all content ── */}
       <div className="motion-background fixed inset-0 -z-10 pointer-events-none bg-[#F7F9FC]">
-        <NeuralBackground
-          className="w-full h-full opacity-[0.62]"
-          color="rgba(80, 145, 255, 0.36)"
-          trailOpacity={0.075}
-          particleCount={600}
-          speed={1}
-        />
+        <ModeReactiveBackground className="w-full h-full opacity-[0.62]" />
       </div>
 
       {isAdminPage ? (

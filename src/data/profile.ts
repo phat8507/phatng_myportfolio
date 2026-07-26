@@ -64,10 +64,9 @@ export const profileData = {
     ld: { file: "Phat_Nguyen_CV_LD_HR.pdf", downloadName: "Phat_Nguyen_CV_LD_HR.pdf" }
   } satisfies ModeVariant<{ file: string; downloadName: string }>,
 
-  // TODO: swap the ld path once a Learning & Development / HR-specific photo is provided.
   photo: {
-    coordination: "uploads/photo-1777006151341.jpg",
-    ld: "uploads/photo-1777006151341.jpg"
+    coordination: "uploads/profile-photo.webp",
+    ld: "uploads/profile-photo.webp"
   } satisfies ModeVariant<string>,
 
   about: {

@@ -35,9 +35,9 @@ const PRESETS: Record<ViewMode, StylePreset> = {
     connectDistance: 125,
     lineStyle: "curved",
     grid: false,
-    driftY: -0.015,
+    driftY: -0.045,
     nodeRadius: 1.7,
-    glow: false,
+    glow: true,
   },
 };
 
@@ -90,11 +90,11 @@ function buildGridPattern(width: number, height: number, dpr: number) {
   const ctx = off.getContext("2d");
   if (!ctx) return off;
   ctx.scale(dpr, dpr);
-  ctx.fillStyle = "rgba(37, 99, 235, 0.05)";
+  ctx.fillStyle = "rgba(37, 99, 235, 0.09)";
   for (let x = 0; x < width; x += GRID_SPACING) {
     for (let y = 0; y < height; y += GRID_SPACING) {
       ctx.beginPath();
-      ctx.arc(x, y, 1, 0, Math.PI * 2);
+      ctx.arc(x, y, 1.2, 0, Math.PI * 2);
       ctx.fill();
     }
   }
@@ -145,7 +145,7 @@ export function ModeReactiveBackground({ className }: ModeReactiveBackgroundProp
         const dx = b.x - a.x;
         const dy = b.y - a.y;
         // Perpendicular offset for a gentle organic curve.
-        const curveAmount = 0.06;
+        const curveAmount = 0.11;
         ctx.quadraticCurveTo(mx - dy * curveAmount, my + dx * curveAmount, b.x, b.y);
       } else {
         ctx.lineTo(b.x, b.y);

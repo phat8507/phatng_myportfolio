@@ -23,9 +23,10 @@ import {
 } from "../motion/variants";
 
 export function Hero() {
-  const profileImageUrl = `${import.meta.env.BASE_URL}uploads/photo-1777006151341.jpg`;
-  const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
   const { mode } = useViewMode();
+  const cv = profileData.cv[mode];
+  const profileImageUrl = `${import.meta.env.BASE_URL}${profileData.photo[mode]}`;
+  const cvUrl = `${import.meta.env.BASE_URL}${cv.file}`;
   const headline = profileData.headline[mode];
   const heroDescription = profileData.heroDescription[mode];
   const targets = profileData.targets[mode];
@@ -130,7 +131,7 @@ export function Hero() {
 
               <a
                 href={cvUrl}
-                download="Phat_Nguyen_CV.pdf"
+                download={cv.downloadName}
                 className="motion-button inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[rgba(255,255,255,0.82)] border border-[rgba(255,255,255,0.74)] backdrop-blur-sm text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(15,42,74,0.06),inset_0_1.5px_0_rgba(255,255,255,0.92)] active:translate-y-0"
               >
                 <Download size={16} />

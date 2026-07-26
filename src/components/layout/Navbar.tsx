@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { profileData } from "../../data/profile";
+import { useViewMode } from "../../lib/view-mode";
 import { ViewModeToggle } from "./ViewModeToggle";
 
 interface NavbarProps {
@@ -8,9 +10,11 @@ interface NavbarProps {
 }
 
 export function Navbar({ onOpenCommand }: NavbarProps) {
+  const { mode } = useViewMode();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
+  const cv = profileData.cv[mode];
+  const cvUrl = `${import.meta.env.BASE_URL}${cv.file}`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -93,7 +97,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
               {/* Download CV */}
               <a
                 href={cvUrl}
-                download="Phat_Nguyen_CV.pdf"
+                download={cv.downloadName}
                 className="motion-button inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0F2A4A] text-white text-[0.78rem] font-bold transition-all hover:bg-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20 whitespace-nowrap"
               >
                 <Download size={14} />
@@ -149,7 +153,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
           <div className="pt-6 border-t border-[#D8E1EC]">
             <a
               href={cvUrl}
-              download="Phat_Nguyen_CV.pdf"
+              download={cv.downloadName}
               className="motion-button flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#0F2A4A] text-white font-bold"
               onClick={() => setMobileMenuOpen(false)}
             >

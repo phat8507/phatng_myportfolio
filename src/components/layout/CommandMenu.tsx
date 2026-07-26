@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Search } from "lucide-react";
+import { profileData } from "../../data/profile";
+import { useViewMode } from "../../lib/view-mode";
 
 interface Command {
   title: string;
@@ -14,9 +16,10 @@ interface CommandMenuProps {
 }
 
 export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
+  const { mode } = useViewMode();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
+  const cvUrl = `${import.meta.env.BASE_URL}${profileData.cv[mode].file}`;
 
   const commands: Command[] = [
     { title: 'View Projects', sub: 'Jump to project case studies', key: '#projects', action: () => { window.location.hash = 'projects'; } },

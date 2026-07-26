@@ -59,6 +59,17 @@ export const profileData = {
     portfolio: "https://phat8507.github.io/phatng_myportfolio"
   },
 
+  cv: {
+    coordination: { file: "Phat_Nguyen_CV.pdf", downloadName: "Phat_Nguyen_CV.pdf" },
+    ld: { file: "Phat_Nguyen_CV_LD_HR.pdf", downloadName: "Phat_Nguyen_CV_LD_HR.pdf" }
+  } satisfies ModeVariant<{ file: string; downloadName: string }>,
+
+  // TODO: swap the ld path once a Learning & Development / HR-specific photo is provided.
+  photo: {
+    coordination: "uploads/photo-1777006151341.jpg",
+    ld: "uploads/photo-1777006151341.jpg"
+  } satisfies ModeVariant<string>,
+
   about: {
     paragraphs: {
       coordination: [

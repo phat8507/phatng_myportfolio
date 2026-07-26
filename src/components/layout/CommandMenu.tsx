@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Search } from "lucide-react";
 import { profileData } from "../../data/profile";
-import { useViewMode } from "../../lib/view-mode";
 
 interface Command {
   title: string;
@@ -16,15 +15,16 @@ interface CommandMenuProps {
 }
 
 export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
-  const { mode } = useViewMode();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
-  const cvUrl = `${import.meta.env.BASE_URL}${profileData.cv[mode].file}`;
+  const coordinationCvUrl = `${import.meta.env.BASE_URL}${profileData.cv.coordination.file}`;
+  const ldCvUrl = `${import.meta.env.BASE_URL}${profileData.cv.ld.file}`;
 
   const commands: Command[] = [
     { title: 'View Projects', sub: 'Jump to project case studies', key: '#projects', action: () => { window.location.hash = 'projects'; } },
     { title: 'Copy Email', sub: 'nhtruongphat.forwork@gmail.com', key: 'copy', action: () => { navigator.clipboard.writeText('nhtruongphat.forwork@gmail.com'); alert('Email copied!'); } },
-    { title: 'Download CV', sub: 'Open or download Phat Nguyen CV PDF', key: 'cv', action: () => window.open(cvUrl, '_blank') },
+    { title: 'Download Coordination CV', sub: 'Project Coordination / Operations track', key: 'cv', action: () => window.open(coordinationCvUrl, '_blank') },
+    { title: 'Download L&D / HR CV', sub: 'Learning & Development / HR Manager track', key: 'cv', action: () => window.open(ldCvUrl, '_blank') },
     { title: 'Open LinkedIn', sub: 'linkedin.com/in/nhtruongphat', key: 'link', action: () => window.open('https://linkedin.com/in/nhtruongphat', '_blank') },
     { title: 'Open GitHub', sub: 'github.com/phat8507', key: 'link', action: () => window.open('https://github.com/phat8507', '_blank') },
     { title: 'Open Scrum/MBO Sheet', sub: 'Management sheet for the macroeconomics project', key: 'sheet', action: () => window.open('https://docs.google.com/spreadsheets/d/1J7qV3jRL2DzsedPfVXcWpT1usXZqI-f6/edit?usp=sharing&ouid=115062449513822083905&rtpof=true&sd=true', '_blank') },

@@ -42,11 +42,11 @@ export const projectsData: ProjectData[] = [
     medal: "Outstanding Team",
     title: "YFLP Season 6 - Semi-Final (Marketing Case)",
     role: "Team Leader",
-    highlights: ["Outstanding Team - Semi-Final", "5-member team", "9-day sprint", "MBO + Scrum"],
-    overview: "The semi-final round of the YFC Future Leaders Program (Season 6), an annual leadership competition run by the Youth For Chance (YFC) club. As Team Leader, I guided a 5-member team through an intensive 9-day Marketing Case sprint - focusing less on having every answer and more on building the structure and space for the team to solve the problem together.",
+    highlights: ["Outstanding Team - Semi-Final", "5-member team", "9-day sprint", "Self-built Scrum + MBO tracker"],
+    overview: "The semi-final round of the YFC Future Leaders Program (Season 6), an annual leadership competition run by the Youth For Chance (YFC) club. As Team Leader, I turned an open brief into defined role ownership and a self-built Scrum + MBO tracker, guiding a 5-member team through an intensive 9-day Marketing Case sprint - focusing less on having every answer and more on building the structure and space for the team to solve the problem together.",
     responsibilities: [
       "Led a 5-member team as Team Leader through a 9-day Marketing Case sprint under heavy time pressure.",
-      "Introduced lightweight structure - MBO for goal-setting, a Scrum rhythm for daily progress, and a risk plan - to protect the team's focus and energy against the deadline.",
+      "Built a self-built Scrum + MBO tracker - defined role ownership, a Scrum rhythm for daily progress, and a risk plan - to protect the team's focus and energy against the deadline.",
       "Facilitated collaborative problem-solving, creating space for every member to contribute instead of directing each decision.",
       "Kept the team aligned and motivated through the most compressed stretch of the competition."
     ],
@@ -77,21 +77,21 @@ export const projectsData: ProjectData[] = [
     medal: "Individual Top 5",
     title: "YFLP Season 6 - Grand Final (Business Case)",
     role: "Vice Leader",
-    highlights: ["Individual Top 5 of 25", "5-member team", "10-day sprint", "Full strategic pivot"],
+    highlights: ["Individual Top 5 of 25", "5-member team", "10-day sprint", "Stronger of 2 Finalist Teams"],
     overview: "The grand final of the YFC Future Leaders Program (Season 6). As Vice Leader of a 5-member team, I worked on a 10-day Business Case. Six days in, we realized we had misidentified the core problem and rebuilt the entire strategy from scratch in the final four days - turning a crisis into our strongest work.",
     responsibilities: [
       "Served as Vice Leader of a 5-member team on a 10-day Business Case sprint.",
-      "When the team discovered a misdiagnosed core problem six days in, helped drive a full reset and rebuild of the strategy in the final four days.",
+      "When the team discovered a misdiagnosed core problem six days in, kept the team composed and re-planned 4 sprints across 3 objectives to rebuild the strategy in the final four days.",
       "Owned the Finance, Omni-channel, and Sales workstreams - running the numbers, sizing channels, and defending a P&L that proved the strategic pivot was profitable, not just creative.",
-      "Delivered the closing 'Walk the Talk' inspiring speech on the final stage."
+      "Presented the strategy and financial model to judges across a 20-min pitch, 5-min debate, and 5-min Q&A, and delivered the closing 'Walk the Talk' inspiring speech on the final stage."
     ],
-    outcomes: "Earned an individual Top 5 of 25 for performance and influence after leading a high-pressure strategic turnaround.",
+    outcomes: "Finished as the stronger of the 2 finalist teams and earned an individual Top 5 of 25 for performance and influence after leading a high-pressure strategic turnaround.",
     tags: ["Financial Modeling", "P&L Analysis", "Omni-channel Strategy", "Sales Strategy", "Crisis Management", "Public Speaking", "Business Case"],
     links: [
       { label: "Top 5 Finalist Certificate", url: "https://drive.google.com/file/d/18qAAFOzj6m_ZurzHPORMsA7eZeehWbPX/view" }
     ],
     cardTags: ["Finance & P&L", "Crisis Turnaround", "Public Speaking"],
-    cardDesc: "As Vice Leader in the grand final, owned Finance, Omni-channel & Sales and helped rebuild the full strategy in 4 days after a crisis - earning an individual Top 5 of 25.",
+    cardDesc: "As Vice Leader in the grand final, owned Finance, Omni-channel & Sales and re-planned the strategy in 4 days after a crisis - finishing as the stronger of 2 finalist teams and earning an individual Top 5 of 25.",
     ld: {
       role: "Vice Leader (Acting Lead in the Final)",
       highlights: ["Individual Top 5 of 25", "5-member team", "10-day sprint", "Mid-project crisis recovery"],
@@ -100,10 +100,10 @@ export const projectsData: ProjectData[] = [
         "Acted as lead of a 5-member team on a 10-day Business Case sprint.",
         "Kept the team motivated through a mid-project crisis, rebuilding the approach from insight with 4 days left.",
         "Re-planned 4 sprints across 3 objectives to rebuild the strategy under a compressed timeline.",
-        "Presented the team's strategy to judges and delivered an inspiring closing speech on the final stage."
+        "Presented the team's strategy to judges across a 20-min pitch, 5-min debate, and 5-min Q&A, and delivered an inspiring closing speech on the final stage."
       ],
-      outcomes: "Earned an individual Top 5 of 25 for performance and influence.",
-      cardDesc: "As acting lead in the final, kept the team motivated through a mid-project crisis and re-planned 4 sprints across 3 objectives - earning an individual Top 5 of 25 for performance and influence."
+      outcomes: "Finished as the stronger of the 2 finalist teams and earned an individual Top 5 of 25 for performance and influence.",
+      cardDesc: "As acting lead in the final, kept the team motivated through a mid-project crisis and re-planned 4 sprints across 3 objectives - finishing as the stronger of 2 finalist teams and earning an individual Top 5 of 25."
     }
   },
   {
@@ -121,7 +121,7 @@ export const projectsData: ProjectData[] = [
       "Built an Excel and Google Sheets project dashboard for tracking responsibilities, progress status, and team alignment.",
       "Applied Management by Objectives (MBO) to connect individual responsibilities with project objectives.",
       "Coordinated final deliverables, including a data analysis workbook, structured debate document, and project microsite.",
-      "Integrated 2020-2025 evidence and Vietnam-focused case examples into the research storyline."
+      "Sourced U.S. and Vietnamese government data (2020-2025) to integrate evidence and Vietnam-focused case examples into the research storyline."
     ],
     outcomes: "Received a faculty evaluation score of 9/10 based on research quality, presentation delivery, and teamwork. Delivered a data analysis workbook, structured debate document, project dashboard, and project microsite while keeping team responsibilities and deadlines visible.",
     tags: ["Agile/Scrum", "Sprint Planning", "MBO", "Backlog Tracking", "Milestone Tracking", "Google Sheets", "Research Coordination", "Deliverable Management"],
@@ -138,7 +138,7 @@ export const projectsData: ProjectData[] = [
         "Built a self-built dashboard to track accountability, progress status, and team alignment across 3 offline sprint sessions.",
         "Coordinated planning, check-ins, review logistics, and final delivery for the full team.",
         "Coordinated final deliverables, including a data analysis workbook, structured debate document, and project microsite.",
-        "Integrated 2020-2025 evidence and Vietnam-focused case examples into the research storyline."
+        "Sourced U.S. and Vietnamese government data (2020-2025) to integrate evidence and Vietnam-focused case examples into the research storyline."
       ],
       outcomes: "Delivered a 9/10 faculty-evaluated project by keeping each member's individual goals aligned to shared objectives and accountability visible throughout.",
       cardDesc: "Coached an 8-member macroeconomics research team using MBO to align individual goals, a self-built accountability dashboard, and 3 offline sprint sessions - earning a 9/10 faculty score."

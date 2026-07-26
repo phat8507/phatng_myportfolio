@@ -15,7 +15,7 @@ export const profileData = {
   } satisfies ModeVariant<string>,
 
   heroDescription: {
-    coordination: "I lead teams and coordinate the moving parts - people, timelines, and stakeholders - so projects land on time and on target. As a Team Leader, I guided my team to Best Team of the Semi-Final. As Vice Leader, I helped my team reach a Top 5 of 25 finish in the YFC Future Leaders Program. Alongside this, I led an 8-member Scrum team to a 9/10 faculty score, ran operations for a 50-member club with 85% active participation, and delivered weekly stakeholder reporting across two concurrent teaching roles.",
+    coordination: "I lead teams and coordinate the moving parts - people, timelines, and stakeholders - so projects land on time and on target. As a Team Leader, I guided my team to the Outstanding Team award in the Semi-Final. As acting lead in the grand final, I helped my team recover from a mid-project crisis to an individual Top 5 of 25 finish in the YFC Future Leaders Program. Alongside this, I led an 8-member Scrum team to a 9/10 faculty score, ran operations for a 50-member club with 85% active participation, and delivered weekly stakeholder reporting across two concurrent teaching roles.",
     ld: "Business Administration (E-Business) student pursuing a career in Learning & Development with a long-term goal of HR management in multinational and corporate environments. IELTS 7.5 and Scrum Fundamentals Certified, with hands-on experience designing structured learning programs, tracking performance data, and onboarding, coaching, and developing team members across cross-functional settings."
   } satisfies ModeVariant<string>,
 
@@ -73,7 +73,7 @@ export const profileData = {
     paragraphs: {
       coordination: [
         "Currently pursuing **Business Administration (E-Business)** at Ho Chi Minh University of Banking, I combine hands-on team leadership with project coordination - bringing certifications and real-world experience alongside my studies. I'm building toward a career that connects people and processes, with a growing focus on team development and people operations.",
-        "My practical experience spans **competitive team leadership, Scrum-led academic projects, club operations, and active paid teaching roles**. As a Team Leader and Vice Leader in the YFC Future Leaders Program, I guided teams through high-pressure case competitions - earning Best Team of the Semi-Final and a Top 5 of 25 finish. Across these settings I have delivered timeline planning, task tracking, stakeholder communication, and people coordination in measurable, real-world environments."
+        "My practical experience spans **competitive team leadership, Scrum-led academic projects, club operations, and active paid teaching roles**. As a Team Leader and Vice Leader in the YFC Future Leaders Program, I guided teams through high-pressure case competitions - earning the Outstanding Team award in the Semi-Final and an individual Top 5 of 25 finish in the Grand Final. Across these settings I have delivered timeline planning, task tracking, stakeholder communication, and people coordination in measurable, real-world environments."
       ],
       ld: [
         "Currently pursuing **Business Administration (E-Business)** at Ho Chi Minh University of Banking, I'm building toward a career in **Learning & Development**, with a long-term goal of HR management in multinational and corporate environments. My work centers on designing structured learning programs, tracking performance data, and coaching people toward measurable growth.",
@@ -87,7 +87,7 @@ export const profileData = {
         { key: "Program", value: "Business Administration - E-Business - Class of 2029" },
         { key: "English", value: "IELTS 7.5 - Professional Working", accent: true },
         { key: "Languages", value: "Vietnamese (Native) - English" },
-        { key: "Learning", value: "Google PM Certificate - Expected Aug 2026" },
+        { key: "Learning", value: "Google PM Certificate - Expected Q3 2026" },
         { key: "Location", value: "Ho Chi Minh City, Vietnam" },
         { key: "Target", value: "Project Coordination - Team Leadership - Learning & Development", accent: true }
       ],

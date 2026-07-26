@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 import { cn } from "../../lib/utils";
-import { profileData } from "../../data/profile";
-import { useViewMode } from "../../lib/view-mode";
+import { CvDownloadMenu } from "./CvDownloadMenu";
 import { ViewModeToggle } from "./ViewModeToggle";
 
 interface NavbarProps {
@@ -10,11 +9,8 @@ interface NavbarProps {
 }
 
 export function Navbar({ onOpenCommand }: NavbarProps) {
-  const { mode } = useViewMode();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const cv = profileData.cv[mode];
-  const cvUrl = `${import.meta.env.BASE_URL}${cv.file}`;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -95,14 +91,13 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
 
             <div className="flex items-center gap-2 pl-3 border-l border-[#D8E1EC] shrink-0">
               {/* Download CV */}
-              <a
-                href={cvUrl}
-                download={cv.downloadName}
+              <CvDownloadMenu
+                align="right"
                 className="motion-button inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0F2A4A] text-white text-[0.78rem] font-bold transition-all hover:bg-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20 whitespace-nowrap"
               >
                 <Download size={14} />
                 <span>Download CV</span>
-              </a>
+              </CvDownloadMenu>
 
               {/* Command Menu */}
               <button
@@ -151,14 +146,13 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
           </ul>
           
           <div className="pt-6 border-t border-[#D8E1EC]">
-            <a
-              href={cvUrl}
-              download={cv.downloadName}
+            <CvDownloadMenu
+              align="left"
+              onSelect={() => setMobileMenuOpen(false)}
               className="motion-button flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#0F2A4A] text-white font-bold"
-              onClick={() => setMobileMenuOpen(false)}
             >
               <Download size={18} /> Download CV
-            </a>
+            </CvDownloadMenu>
           </div>
         </div>
       </div>

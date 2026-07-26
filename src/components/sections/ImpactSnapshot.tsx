@@ -1,4 +1,4 @@
-import { ClipboardCheck, GraduationCap, Landmark, Trophy, Users } from "lucide-react";
+import { Award, ClipboardCheck, Trophy, Users } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { useViewMode } from "../../lib/view-mode";
@@ -22,9 +22,9 @@ const impactItems = {
       text: "Maintained 85% active participation after a structured member intake for a 50-member athletics club."
     },
     {
-      icon: Landmark,
-      title: "15 Institutions",
-      text: "Managed inter-school tournament logistics, match scheduling, and head coach communication across 15 teams."
+      icon: Award,
+      title: "Individual Top 5 of 25",
+      text: "Delivered a high-pressure strategic turnaround as acting lead in the grand final, finishing as the stronger of 2 finalist teams."
     },
     {
       icon: ClipboardCheck,
@@ -44,7 +44,7 @@ const impactItems = {
       text: "Onboarded 15 of 37 applicants through a structured intake program, sustaining 85% active participation."
     },
     {
-      icon: GraduationCap,
+      icon: Award,
       title: "Individual Top 5 of 25",
       text: "Coached a team through a mid-project crisis and delivered an inspiring closing speech, earning individual recognition for performance and influence."
     },

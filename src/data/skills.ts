@@ -46,8 +46,6 @@ export const skillsData: { coordination: SkillCategory[]; ld: SkillCategory[] } 
         "Microsoft Word",
         "Microsoft PowerPoint",
         "Google Sheets",
-        "Trello",
-        "Notion",
         "Canva",
         "CapCut"
       ]

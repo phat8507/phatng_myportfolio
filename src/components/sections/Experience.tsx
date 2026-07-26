@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { experienceData } from "../../data/experience";
 import { useViewMode } from "../../lib/view-mode";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -42,9 +43,12 @@ export function Experience() {
             </span>
             <div className="w-7 h-[2px] bg-[#2563EB] rounded-full" />
           </div>
-          <h2 className="font-display text-[clamp(2rem,4vw,2.8rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]">
-            Experience
-          </h2>
+          <KineticText
+            as="h2"
+            text="Experience"
+            splitBy="char"
+            className="font-display text-[clamp(2rem,4vw,2.8rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]"
+          />
         </div>
 
         {/* ── Timeline & Cards Container ────────────── */}

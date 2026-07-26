@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { awardsData, educationData } from "../../data/education";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { TiltCard } from "../effects/TiltCard";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -26,9 +27,11 @@ export function Education() {
     >
       <div className="section-container max-w-[1080px]">
         <header className="education-header mb-9 lg:mb-10">
-          <h2 className="font-display text-[clamp(1.9rem,4vw,3.45rem)] font-bold leading-[1.04] tracking-tight text-[#0F2A4A]">
-            Education & Certifications
-          </h2>
+          <KineticText
+            as="h2"
+            text="Education & Certifications"
+            className="font-display text-[clamp(1.9rem,4vw,3.45rem)] font-bold leading-[1.04] tracking-tight text-[#0F2A4A]"
+          />
           <span className="education-header-line" aria-hidden="true" />
         </header>
 

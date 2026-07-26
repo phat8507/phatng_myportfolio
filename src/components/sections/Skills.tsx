@@ -4,6 +4,7 @@ import { skillsData } from "../../data/skills";
 import { useViewMode } from "../../lib/view-mode";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { TiltCard } from "../effects/TiltCard";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -56,9 +57,12 @@ export function Skills() {
             </span>
             <div className="w-8 h-[2px] bg-[#2563EB] rounded-full" />
           </div>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]">
-            Skills
-          </h2>
+          <KineticText
+            as="h2"
+            text="Skills"
+            splitBy="char"
+            className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]"
+          />
         </div>
 
         <motion.div

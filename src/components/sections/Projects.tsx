@@ -8,6 +8,7 @@ import { ProjectModal } from "../project/ProjectModal";
 import { NumberedPagination } from "../ui/NumberedPagination";
 import { cn } from "../../lib/utils";
 import { useViewMode } from "../../lib/view-mode";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -87,9 +88,11 @@ export function Projects() {
             </span>
             <div className="w-8 h-[2px] bg-[#2563EB] rounded-full" />
           </div>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A] mb-4">
-            Projects &amp; Leadership
-          </h2>
+          <KineticText
+            as="h2"
+            text="Projects & Leadership"
+            className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A] mb-4"
+          />
         </div>
 
         {/* ── Controls Row ───────────────────────── */}
@@ -133,23 +136,28 @@ export function Projects() {
           
         </div>
 
-        {/* ── Grid ───────────────────────────────── */}
+        {/* ── Grid (staggered "broken grid" offsets per column) ───────────────────────────────── */}
         <motion.div
           key={`${filter}|${search}|${safeCurrentPage}`}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={viewportReveal}
         >
-          {paginatedProjects.map((project) => (
-            <motion.div key={project.id} variants={staggerItem} className="h-full">
-              <ProjectCard
-                project={project}
-                onClick={() => setSelectedProject(project)}
-              />
-            </motion.div>
-          ))}
+          {paginatedProjects.map((project, index) => {
+            const colOffset = shouldReduceMotion ? 0 : [0, -22, 16][index % 3];
+            return (
+              <div key={project.id} className="h-full" style={{ transform: `translateY(${colOffset}px)` }}>
+                <motion.div variants={staggerItem} className="h-full">
+                  <ProjectCard
+                    project={project}
+                    onClick={() => setSelectedProject(project)}
+                  />
+                </motion.div>
+              </div>
+            );
+          })}
           {filteredProjects.length === 0 && (
             <div className="col-span-full py-16 text-center text-[#5B6B82] bg-white rounded-[16px] border border-[#D8E1EC]">
               <div className="font-medium text-[1.1rem] mb-1">No projects found</div>

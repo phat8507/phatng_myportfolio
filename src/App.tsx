@@ -14,6 +14,7 @@ import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { IntroPreloader } from './components/ui/IntroPreloader';
 import { ModeReactiveBackground } from './components/ui/mode-reactive-background';
+import { CustomCursor } from './components/ui/CustomCursor';
 import { AdminPage } from './components/admin/AdminPage';
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
       <div className="motion-background fixed inset-0 -z-10 pointer-events-none bg-[#F7F9FC]">
         <ModeReactiveBackground className="w-full h-full opacity-[0.62]" />
       </div>
+
+      <CustomCursor />
 
       {isAdminPage ? (
         <AdminPage />

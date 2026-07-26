@@ -18,6 +18,7 @@ import { profileData } from "../../data/profile";
 import { cn } from "../../lib/utils";
 import { useViewMode } from "../../lib/view-mode";
 import { CvDownloadMenu } from "../layout/CvDownloadMenu";
+import { KineticText } from "../motion/KineticText";
 import {
   createStaggerContainerVariants,
   createStaggerItemVariants,
@@ -91,15 +92,19 @@ export function Hero() {
             </motion.div>
 
             <motion.div className="mb-4" variants={staggerItem}>
-              <h1 className="font-display text-[clamp(2.8rem,5.5vw,4.2rem)] font-bold leading-[1.05] tracking-tight text-[#0B1220] max-w-[680px]">
+              <h1 className="gradient-text-pop font-display text-[clamp(3.1rem,6.2vw,4.8rem)] font-extrabold leading-[1.02] tracking-tight max-w-[680px]">
                 {profileData.name}
               </h1>
               <p className="text-[clamp(1.25rem,2.2vw,1.6rem)] font-playfair italic mt-1.5 text-[#2563EB]">
                 {profileData.viName}
               </p>
-              <p className="mt-3 text-[0.8rem] sm:text-[0.85rem] font-bold uppercase tracking-[0.16em] text-[#5B6B82]">
-                {headline}
-              </p>
+              <KineticText
+                as="p"
+                text={headline}
+                splitBy="word"
+                trigger="mount"
+                className="mt-3 text-[0.8rem] sm:text-[0.85rem] font-bold uppercase tracking-[0.16em] text-[#5B6B82]"
+              />
             </motion.div>
 
             <motion.div className="w-16 h-[2px] bg-[#2563EB] mb-6 opacity-40 rounded-full" variants={staggerItem} />
@@ -152,7 +157,14 @@ export function Hero() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: shouldReduceMotion ? 0 : 0.75, delay: shouldReduceMotion ? 0 : 0.18, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="profile-star-inside relative w-full rounded-[26px] overflow-hidden aspect-[4/4.45] shadow-xl transition-all duration-500 group hover:shadow-2xl">
+            <div
+              className="profile-star-inside relative w-full rounded-[26px] overflow-hidden aspect-[4/4.45] transition-all duration-500 group"
+              style={{
+                transform: "rotate(-2.5deg)",
+                boxShadow: "9px 9px 0 0 var(--pop), 0 24px 48px rgba(15,42,74,0.16)",
+                border: "4px solid #0B1220",
+              }}
+            >
               <img
                 src={profileImageUrl}
                 alt={profileData.name}
@@ -160,7 +172,10 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/40 via-transparent to-transparent" />
 
-              <div className="glass-card glass-card--elevated glass-noise absolute bottom-3.5 left-3.5 right-3.5 z-[2] rounded-[15px] p-2.5 flex items-center gap-2.5">
+              <div
+                className="glass-card glass-card--elevated glass-noise absolute bottom-3.5 left-3.5 right-3.5 z-[2] rounded-[15px] p-2.5 flex items-center gap-2.5"
+                style={{ transform: "rotate(1.5deg)" }}
+              >
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center font-display text-[0.84rem] font-bold text-white shrink-0 shadow-md"
                   style={{ background: "linear-gradient(135deg, #0F2A4A, #2563EB)" }}
@@ -181,9 +196,13 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="grid w-full grid-cols-2 auto-rows-[78px] gap-2.5">
-              {stats.map((stat) => (
-                <div key={stat.label} className="hero-stat-card glass-card h-full rounded-[13px] p-2.5 group flex flex-col justify-between">
+            <div className="grid w-full grid-cols-2 auto-rows-[78px] gap-3 mt-3">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className="hero-stat-card glass-card h-full rounded-[13px] p-2.5 group flex flex-col justify-between transition-transform duration-300 hover:!rotate-0 hover:scale-105"
+                  style={{ transform: `rotate(${i % 2 === 0 ? -2 : 2}deg)` }}
+                >
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-7 h-7 rounded-lg bg-[#2563EB]/5 flex items-center justify-center transition-colors group-hover:bg-[#2563EB]/10">
                       {getStatIcon(stat.label, 16)}

@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { profileData } from "../../data/profile";
 import { useViewMode } from "../../lib/view-mode";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -52,9 +53,11 @@ export function About() {
             </span>
             <div className="w-8 h-[2px] bg-[#2563EB] rounded-full" />
           </div>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]">
-            About Me
-          </h2>
+          <KineticText
+            as="h2"
+            text="About Me"
+            className="font-display text-[clamp(2rem,4.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]"
+          />
         </div>
 
         <motion.div

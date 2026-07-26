@@ -2,6 +2,7 @@ import { Award, ClipboardCheck, Trophy, Users } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { useViewMode } from "../../lib/view-mode";
+import { KineticText } from "../motion/KineticText";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -81,9 +82,12 @@ export function ImpactSnapshot() {
             </span>
             <div className="w-8 h-[2px] bg-[#2563EB] rounded-full" />
           </div>
-          <h2 className="font-display text-[clamp(1.65rem,3vw,2.25rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]">
-            {mode === "ld" ? "L&D evidence at a glance" : "Coordination evidence at a glance"}
-          </h2>
+          <KineticText
+            key={mode}
+            as="h2"
+            text={mode === "ld" ? "L&D evidence at a glance" : "Coordination evidence at a glance"}
+            className="font-display text-[clamp(1.65rem,3vw,2.25rem)] font-extrabold leading-[1.1] tracking-tight text-[#0F2A4A]"
+          />
         </div>
 
         <motion.div

@@ -18,24 +18,26 @@ interface StylePreset {
   glow: boolean;
 }
 
+// Both modes share the same color and motion so the site still reads as
+// one design - only a couple of small touches shift with the active mode.
 const PRESETS: Record<ViewMode, StylePreset> = {
   coordination: {
     rgb: "37, 99, 235",
-    connectDistance: 150,
+    connectDistance: 140,
     lineStyle: "straight",
     grid: true,
     driftY: 0,
-    nodeRadius: 1.6,
+    nodeRadius: 1.7,
     glow: false,
   },
   ld: {
-    rgb: "59, 191, 145",
-    connectDistance: 115,
+    rgb: "37, 99, 235",
+    connectDistance: 125,
     lineStyle: "curved",
     grid: false,
-    driftY: -0.055,
-    nodeRadius: 2.1,
-    glow: true,
+    driftY: -0.015,
+    nodeRadius: 1.7,
+    glow: false,
   },
 };
 
@@ -143,7 +145,7 @@ export function ModeReactiveBackground({ className }: ModeReactiveBackgroundProp
         const dx = b.x - a.x;
         const dy = b.y - a.y;
         // Perpendicular offset for a gentle organic curve.
-        const curveAmount = 0.12;
+        const curveAmount = 0.06;
         ctx.quadraticCurveTo(mx - dy * curveAmount, my + dx * curveAmount, b.x, b.y);
       } else {
         ctx.lineTo(b.x, b.y);

@@ -2,11 +2,12 @@ import { useMemo, useRef, useState } from "react";
 import { Search } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { ProjectData } from "../../data/projects";
-import { projectsData } from "../../data/projects";
+import { projectsData, resolveProject } from "../../data/projects";
 import { ProjectCard } from "../project/ProjectCard";
 import { ProjectModal } from "../project/ProjectModal";
 import { NumberedPagination } from "../ui/NumberedPagination";
 import { cn } from "../../lib/utils";
+import { useViewMode } from "../../lib/view-mode";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -17,6 +18,7 @@ import {
 const PROJECTS_PER_PAGE = 3;
 
 export function Projects() {
+  const { mode } = useViewMode();
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,14 +36,19 @@ export function Projects() {
     { id: "leadership", label: "Leadership" }
   ];
 
+  const modeProjects = useMemo(
+    () => projectsData.map((project) => resolveProject(project, mode)),
+    [mode]
+  );
+
   const filteredProjects = useMemo(() => {
-    return projectsData.filter(project => {
+    return modeProjects.filter(project => {
       const matchFilter = filter === "all" || project.category === filter;
       const searchContent = (project.title + " " + project.role + " " + project.tags.join(" ")).toLowerCase();
       const matchSearch = searchContent.includes(search.toLowerCase());
       return matchFilter && matchSearch;
     });
-  }, [filter, search]);
+  }, [modeProjects, filter, search]);
 
   const totalPages = Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
   const safeCurrentPage = totalPages > 0 ? Math.min(currentPage, totalPages) : 1;

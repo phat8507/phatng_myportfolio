@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { profileData } from "../../data/profile";
+import { useViewMode } from "../../lib/view-mode";
 import {
   createBlurFadeUpVariants,
   createStaggerContainerVariants,
@@ -8,13 +9,17 @@ import {
 } from "../motion/variants";
 
 export function About() {
+  const { mode } = useViewMode();
   const { about } = profileData;
+  const snapshot = about.snapshot[mode];
+  const paragraphs = about.paragraphs[mode];
+  const badges = about.badges[mode];
   const shouldReduceMotion = Boolean(useReducedMotion());
   const reveal = createBlurFadeUpVariants(shouldReduceMotion);
   const staggerContainer = createStaggerContainerVariants(shouldReduceMotion, 0.08);
   const staggerItem = createStaggerItemVariants(shouldReduceMotion);
 
-  const renderFactValue = (row: (typeof about.snapshot)[number]) => {
+  const renderFactValue = (row: (typeof snapshot)[number]) => {
     if (row.key !== "English") {
       return row.value;
     }
@@ -60,12 +65,12 @@ export function About() {
           viewport={viewportReveal}
         >
           <motion.div className="about-facts-card overflow-hidden" variants={staggerItem}>
-            {about.snapshot.map((row, idx) => (
-              <div 
-                key={row.key} 
+            {snapshot.map((row, idx) => (
+              <div
+                key={row.key}
                 className={`about-fact-row grid grid-cols-[108px_1fr] sm:grid-cols-[116px_1fr] ${
                   row.key === "English" ? 'about-fact-row--highlight' : ''
-                } ${idx !== about.snapshot.length - 1 ? 'border-b border-border/80' : ''}`}
+                } ${idx !== snapshot.length - 1 ? 'border-b border-border/80' : ''}`}
               >
                 <div className="about-fact-label px-3.5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.11em] text-muted snapshot-key-bg border-r border-border/80 flex items-center">
                   {row.key}
@@ -81,7 +86,7 @@ export function About() {
             <span className="about-story-accent" aria-hidden="true" />
 
             <div className="about-story-copy">
-              {about.paragraphs.map((p, i) => (
+              {paragraphs.map((p, i) => (
                 <p 
                   key={i} 
                   className="about-story-paragraph"
@@ -93,7 +98,7 @@ export function About() {
             <div className="about-story-divider" aria-hidden="true" />
 
             <div className="about-chip-grid" role="list">
-              {about.badges.map(badge => (
+              {badges.map(badge => (
                 <span key={badge} role="listitem" className="about-chip inline-flex items-center justify-center">
                   {badge}
                 </span>

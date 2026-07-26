@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { ViewModeToggle } from "./ViewModeToggle";
 
 interface NavbarProps {
   onOpenCommand: () => void;
@@ -86,6 +87,8 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
               ))}
             </ul>
 
+            <ViewModeToggle />
+
             <div className="flex items-center gap-3 pl-6 border-l border-[#D8E1EC]">
               {/* Download CV */}
               <a
@@ -128,6 +131,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
         )}
       >
         <div className="px-6 py-8 flex flex-col gap-6">
+          <ViewModeToggle className="self-start" />
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>

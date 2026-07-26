@@ -7,12 +7,16 @@ import {
   Globe,
   BookOpen,
   ClipboardList,
-  Trophy
+  Trophy,
+  GraduationCap,
+  HeartHandshake,
+  Briefcase
 } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { MouseEvent } from "react";
 import { profileData } from "../../data/profile";
 import { cn } from "../../lib/utils";
+import { useViewMode } from "../../lib/view-mode";
 import {
   createStaggerContainerVariants,
   createStaggerItemVariants,
@@ -21,6 +25,11 @@ import {
 export function Hero() {
   const profileImageUrl = `${import.meta.env.BASE_URL}uploads/photo-1777006151341.jpg`;
   const cvUrl = `${import.meta.env.BASE_URL}Phat_Nguyen_CV.pdf`;
+  const { mode } = useViewMode();
+  const headline = profileData.headline[mode];
+  const heroDescription = profileData.heroDescription[mode];
+  const targets = profileData.targets[mode];
+  const stats = profileData.stats[mode];
   const shouldReduceMotion = Boolean(useReducedMotion());
   const staggerContainer = createStaggerContainerVariants(shouldReduceMotion, 0.11);
   const staggerItem = createStaggerItemVariants(shouldReduceMotion);
@@ -35,18 +44,27 @@ export function Hero() {
     switch (tag) {
       case "Project Coordination": return <Users size={14} />;
       case "Project Management": return <ClipboardList size={14} />;
+      case "Team Leadership": return <Users size={14} />;
       case "Operations": return <ClipboardList size={14} />;
       case "Agile/Scrum": return <BookOpen size={14} />;
       case "Event Logistics": return <Calendar size={14} />;
+      case "Learning & Development": return <GraduationCap size={14} />;
+      case "Talent Development": return <GraduationCap size={14} />;
+      case "Coaching & Mentoring": return <HeartHandshake size={14} />;
+      case "HR Management": return <Briefcase size={14} />;
+      case "People Operations": return <ClipboardList size={14} />;
       default: return null;
     }
   };
 
   const getStatIcon = (label: string, iconSize = 18) => {
     switch (label) {
+      case "Competition": return <Trophy size={iconSize} className="text-[#2563EB]" />;
+      case "Track": return <GraduationCap size={iconSize} className="text-[#2563EB]" />;
       case "Score": return <Trophy size={iconSize} className="text-[#2563EB]" />;
       case "Participation": return <Users size={iconSize} className="text-[#2563EB]" />;
       case "Scale": return <Users size={iconSize} className="text-[#2563EB]" />;
+      case "Coached": return <HeartHandshake size={iconSize} className="text-[#2563EB]" />;
       case "English": return <Globe size={iconSize} className="text-[#2563EB]" />;
       default: return null;
     }
@@ -80,18 +98,18 @@ export function Hero() {
                 {profileData.viName}
               </p>
               <p className="mt-3 text-[0.8rem] sm:text-[0.85rem] font-bold uppercase tracking-[0.16em] text-[#5B6B82]">
-                {profileData.headline}
+                {headline}
               </p>
             </motion.div>
 
             <motion.div className="w-16 h-[2px] bg-[#2563EB] mb-6 opacity-40 rounded-full" variants={staggerItem} />
 
             <motion.p className="text-[clamp(1rem,1.6vw,1.15rem)] font-medium max-w-[600px] mb-8 leading-[1.65] text-[#5B6B82]" variants={staggerItem}>
-              {profileData.heroDescription}
+              {heroDescription}
             </motion.p>
 
             <motion.div className="flex flex-wrap gap-2 mb-10 max-w-[620px]" variants={staggerItem}>
-              {profileData.targets.map((tag) => (
+              {targets.map((tag) => (
                 <span key={tag} className="tag flex items-center gap-2 py-2 px-4 text-[0.75rem] font-bold text-[#5B6B82] rounded-full hover:border-[#2563EB] hover:text-[#2563EB] transition-all cursor-default">
                   <span className="text-[#2563EB]/80">{getTagIcon(tag)}</span>
                   {tag}
@@ -165,7 +183,7 @@ export function Hero() {
             </div>
 
             <div className="grid w-full grid-cols-2 auto-rows-[78px] gap-2.5">
-              {profileData.stats.map((stat) => (
+              {stats.map((stat) => (
                 <div key={stat.label} className="hero-stat-card glass-card h-full rounded-[13px] p-2.5 group flex flex-col justify-between">
                   <div className="flex items-center gap-2 mb-1">
                     <div className="w-7 h-7 rounded-lg bg-[#2563EB]/5 flex items-center justify-center transition-colors group-hover:bg-[#2563EB]/10">

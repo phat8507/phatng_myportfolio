@@ -1,6 +1,7 @@
 import { GraduationCap, Users, ClipboardList, Calendar } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { experienceData } from "../../data/experience";
+import { useViewMode } from "../../lib/view-mode";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import {
   createBlurFadeUpVariants,
@@ -16,6 +17,7 @@ const iconMap = [
 ];
 
 export function Experience() {
+  const { mode } = useViewMode();
   const shouldReduceMotion = Boolean(useReducedMotion());
   const reveal = createBlurFadeUpVariants(shouldReduceMotion);
   const staggerContainer = createStaggerContainerVariants(shouldReduceMotion, 0.1);
@@ -111,7 +113,7 @@ export function Experience() {
 
                   {/* Description */}
                   <ul className="flex flex-col gap-2 mb-5 max-w-[760px]">
-                    {exp.bullets.map((item) => (
+                    {(mode === "ld" ? exp.bulletsLD : exp.bullets).map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-[0.8rem] text-[#5B6B82] leading-[1.65]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0 mt-2" />
                         <span>{item}</span>

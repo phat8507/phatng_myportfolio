@@ -1,6 +1,7 @@
-import { CalendarDays, ClipboardList, Languages, LayoutGrid } from "lucide-react";
+import { CalendarDays, ClipboardList, GraduationCap, HeartHandshake, Languages, LayoutGrid, Users } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { skillsData } from "../../data/skills";
+import { useViewMode } from "../../lib/view-mode";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { TiltCard } from "../effects/TiltCard";
 import {
@@ -11,20 +12,28 @@ import {
 } from "../motion/variants";
 
 const iconMap = {
+  "Leadership & Communication": <Users size={22} className="text-[#2563EB]" />,
   "Project Coordination": <CalendarDays size={22} className="text-[#2563EB]" />,
   "Operations & Documentation": <ClipboardList size={22} className="text-[#2563EB]" />,
+  "Learning & Development": <GraduationCap size={22} className="text-[#2563EB]" />,
+  "People & Stakeholder Management": <HeartHandshake size={22} className="text-[#2563EB]" />,
   Tools: <LayoutGrid size={22} className="text-[#2563EB]" />,
   Languages: <Languages size={22} className="text-[#2563EB]" />
 };
 
 const descMap = {
+  "Leadership & Communication": "Leading teams, facilitating people, and communicating with stakeholders.",
   "Project Coordination": "Planning work, aligning stakeholders, and tracking delivery milestones.",
   "Operations & Documentation": "Keeping workflows documented, reported, and operationally organized.",
+  "Learning & Development": "Designing programs, onboarding people, and coaching them toward growth.",
+  "People & Stakeholder Management": "Managing relationships, collaboration, and cross-functional communication.",
   Tools: "Using practical tools to plan, document, analyze, and present work.",
   Languages: "Communicating clearly in Vietnamese and English."
 };
 
 export function Skills() {
+  const { mode } = useViewMode();
+  const categories = skillsData[mode];
   const shouldReduceMotion = Boolean(useReducedMotion());
   const reveal = createBlurFadeUpVariants(shouldReduceMotion);
   const staggerContainer = createStaggerContainerVariants(shouldReduceMotion, 0.08);
@@ -59,7 +68,7 @@ export function Skills() {
           whileInView="visible"
           viewport={viewportReveal}
         >
-          {skillsData.map((card) => (
+          {categories.map((card) => (
             <motion.div key={card.category} variants={staggerItem}>
               <TiltCard
                 tiltLimit={6}

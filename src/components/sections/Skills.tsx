@@ -72,8 +72,9 @@ export function Skills() {
           whileInView="visible"
           viewport={viewportReveal}
         >
-          {categories.map((card) => (
-            <motion.div key={card.category} variants={staggerItem}>
+          {categories.map((card, index) => (
+            <div key={card.category} style={{ transform: shouldReduceMotion ? undefined : `translateY(${index % 2 === 0 ? 0 : -18}px)` }}>
+            <motion.div variants={staggerItem}>
               <TiltCard
                 tiltLimit={6}
                 scale={1.015}
@@ -116,6 +117,7 @@ export function Skills() {
                 </SignInCardBeamEffect>
               </TiltCard>
             </motion.div>
+            </div>
           ))}
         </motion.div>
 

@@ -97,29 +97,32 @@ export function ImpactSnapshot() {
           whileInView="visible"
           viewport={viewportReveal}
         >
-          {items.map((item) => {
+          {items.map((item, index) => {
             const Icon = item.icon;
+            const offset = shouldReduceMotion ? 0 : [0, -16, 8, -12][index % 4];
 
             return (
-              <motion.div key={item.title} variants={staggerItem}>
-                <SignInCardBeamEffect
-                  enableTilt={false}
-                  className="impact-card motion-card overflow-hidden"
-                  data-cursor="hover"
-                >
-                  <article className="relative z-10 p-5 h-full">
-                    <div className="w-10 h-10 rounded-full bg-[rgba(37,99,235,0.07)] flex items-center justify-center mb-4">
-                      <Icon size={19} className="text-[#2563EB]" />
-                    </div>
-                    <h3 className="text-[1rem] font-bold text-[#0B1220] leading-tight mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-[0.84rem] text-[#5B6B82] leading-[1.55]">
-                      {item.text}
-                    </p>
-                  </article>
-                </SignInCardBeamEffect>
-              </motion.div>
+              <div key={item.title} style={{ transform: `translateY(${offset}px)` }}>
+                <motion.div variants={staggerItem}>
+                  <SignInCardBeamEffect
+                    enableTilt={false}
+                    className="impact-card motion-card overflow-hidden"
+                    data-cursor="hover"
+                  >
+                    <article className="relative z-10 p-5 h-full">
+                      <div className="w-10 h-10 rounded-full bg-[rgba(37,99,235,0.07)] flex items-center justify-center mb-4">
+                        <Icon size={19} className="text-[#2563EB]" />
+                      </div>
+                      <h3 className="text-[1rem] font-bold text-[#0B1220] leading-tight mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-[0.84rem] text-[#5B6B82] leading-[1.55]">
+                        {item.text}
+                      </p>
+                    </article>
+                  </SignInCardBeamEffect>
+                </motion.div>
+              </div>
             );
           })}
         </motion.div>

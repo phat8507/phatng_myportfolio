@@ -92,7 +92,7 @@ export function Hero() {
             </motion.div>
 
             <motion.div className="mb-4" variants={staggerItem}>
-              <h1 className="gradient-text-pop font-display text-[clamp(3.1rem,6.2vw,4.8rem)] font-extrabold leading-[1.02] tracking-tight max-w-[680px]">
+              <h1 className="font-display text-[clamp(3.1rem,6.2vw,4.8rem)] font-extrabold leading-[1.02] tracking-tight text-[#2563EB] max-w-[680px]">
                 {profileData.name}
               </h1>
               <p className="text-[clamp(1.25rem,2.2vw,1.6rem)] font-playfair italic mt-1.5 text-[#2563EB]">

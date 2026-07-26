@@ -28,12 +28,12 @@ export const educationData = [
 export const awardsData = [
   {
     num: "01",
-    title: "Top 5 Finalist - YFC Future Leaders Program 2026",
+    title: "Individual Top 5 - YFC Future Leaders Program, Season 6 (2026)",
     sub: "Grand Final - Business Case (Team Zenith) - Vice Leader"
   },
   {
     num: "02",
-    title: "Best Team - Semi-Final, YFC Future Leaders Program 2026",
+    title: "Outstanding Team - Semi-Final, YFC Future Leaders Program, Season 6 (2026)",
     sub: "Marketing Case (Team Shift) - Team Leader"
   },
   {

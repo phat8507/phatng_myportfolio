@@ -54,7 +54,7 @@ function App() {
           className="w-full h-full opacity-[0.62]"
           color="rgba(80, 145, 255, 0.36)"
           trailOpacity={0.075}
-          particleCount={9000}
+          particleCount={600}
           speed={1}
         />
       </div>

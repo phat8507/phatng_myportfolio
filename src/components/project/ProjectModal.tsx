@@ -1,4 +1,4 @@
-import { X, ExternalLink } from "lucide-react";
+import { X, ArrowSquareOut } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import type { ProjectData, ProjectLink } from "../../data/projects";
@@ -161,7 +161,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3 py-[7px] rounded-full border border-border-dark bg-card text-accent text-[0.75rem] font-bold transition-all hover:-translate-y-[1px] hover:bg-accent hover:text-white"
                         >
-                          <ExternalLink size={12} />
+                          <ArrowSquareOut size={12} />
                           {link.label}
                         </a>
                       ))}

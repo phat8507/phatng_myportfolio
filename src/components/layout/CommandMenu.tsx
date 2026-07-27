@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Search } from "lucide-react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 import { profileData } from "../../data/profile";
 
 interface Command {
@@ -75,7 +75,7 @@ export function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
         onClick={e => e.stopPropagation()}
       >
         <div className="relative" style={{ borderBottom: '1px solid var(--border-dark)' }}>
-          <Search size={18} className="absolute left-[1.1rem] top-1/2 -translate-y-1/2 text-muted" />
+          <MagnifyingGlass size={18} className="absolute left-[1.1rem] top-1/2 -translate-y-1/2 text-muted" />
           <input 
             ref={inputRef}
             value={query}

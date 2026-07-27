@@ -1,5 +1,5 @@
 import { type FormEvent, useEffect, useMemo, useState } from "react";
-import { Check, Copy, Eye, EyeOff, Lock, RotateCcw } from "lucide-react";
+import { Check, Copy, Eye, EyeSlash, Lock, ArrowCounterClockwise } from "@phosphor-icons/react";
 import { projectsData } from "../../data/projects";
 import type { ProjectData } from "../../data/projects";
 
@@ -422,7 +422,7 @@ export function AdminPage() {
                   onClick={() => setShowPassword((current) => !current)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
-                  {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                  {showPassword ? <EyeSlash size={16} /> : <Eye size={16} />}
                 </button>
               </div>
             </label>
@@ -520,7 +520,7 @@ export function AdminPage() {
                   onClick={mode === "edit" ? resetSelectedProject : resetForm}
                   className="admin-reset-button"
                 >
-                  <RotateCcw size={14} />
+                  <ArrowCounterClockwise size={14} />
                   {mode === "edit" ? "Reset to original" : "Reset"}
                 </button>
               </div>

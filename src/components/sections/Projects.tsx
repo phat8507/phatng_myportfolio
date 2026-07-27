@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from "react";
-import { Search } from "lucide-react";
+import { MagnifyingGlass } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { ProjectData } from "../../data/projects";
 import { projectsData, resolveProject } from "../../data/projects";
@@ -121,7 +121,7 @@ export function Projects() {
 
           {/* Search Box */}
           <div className="relative w-full md:max-w-[300px]">
-            <Search size={16} className="absolute left-[16px] top-1/2 -translate-y-1/2 text-[#5B6B82] pointer-events-none" />
+            <MagnifyingGlass size={16} className="absolute left-[16px] top-1/2 -translate-y-1/2 text-[#5B6B82] pointer-events-none" />
             <input
               type="search"
               placeholder="Search projects..."

@@ -1,4 +1,4 @@
-import { GraduationCap, Users, ClipboardList, Calendar } from "lucide-react";
+import { GraduationCap, Users, Clipboard, Calendar } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import { experienceData } from "../../data/experience";
 import { useViewMode } from "../../lib/view-mode";
@@ -14,7 +14,7 @@ import {
 const iconMap = [
   <GraduationCap size={16} className="text-[#2563EB]" />,
   <Users size={16} className="text-[#2563EB]" />,
-  <ClipboardList size={16} className="text-[#2563EB]" />,
+  <Clipboard size={16} className="text-[#2563EB]" />,
 ];
 
 export function Experience() {

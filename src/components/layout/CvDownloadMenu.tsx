@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { ChevronDown } from "lucide-react";
+import { CaretDown } from "@phosphor-icons/react";
 import { profileData } from "../../data/profile";
 import { cn } from "../../lib/utils";
 
@@ -92,7 +92,7 @@ export function CvDownloadMenu({ className, children, align = "right", onSelect 
         className={className}
       >
         {children}
-        <ChevronDown size={12} className={cn("transition-transform", open && "rotate-180")} />
+        <CaretDown size={12} className={cn("transition-transform", open && "rotate-180")} />
       </button>
 
       {open &&

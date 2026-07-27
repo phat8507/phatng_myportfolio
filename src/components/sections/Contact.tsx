@@ -1,4 +1,4 @@
-import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, Globe, Envelope, MapPin, Phone } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import { profileData } from "../../data/profile";
 import {
@@ -18,7 +18,7 @@ export function Contact() {
       label: "Email",
       value: profileData.contact.email,
       href: `mailto:${profileData.contact.email}`,
-      icon: <Mail size={16} />,
+      icon: <Envelope size={16} />,
       external: false,
     },
     {
@@ -93,7 +93,7 @@ export function Contact() {
               className="contact-cta motion-button shiny-cta-same-color inline-flex items-center text-white font-bold rounded-full transition-all hover:opacity-85 hover:-translate-y-0.5"
             >
               <span>
-                <Mail size={14} />
+                <Envelope size={14} />
                 Send me an email
               </span>
             </a>

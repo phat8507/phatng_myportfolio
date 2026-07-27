@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronUp } from "lucide-react";
+import { CaretUp } from "@phosphor-icons/react";
 import { cn } from "../../lib/utils";
 
 export function BackToTop() {
@@ -22,7 +22,7 @@ export function BackToTop() {
       )}
       aria-label="Back to top"
     >
-      <ChevronUp size={20} />
+      <CaretUp size={20} />
     </button>
   );
 }

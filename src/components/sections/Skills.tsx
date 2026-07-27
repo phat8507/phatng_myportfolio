@@ -1,4 +1,4 @@
-import { CalendarDays, ClipboardList, GraduationCap, HeartHandshake, Languages, LayoutGrid, Users } from "lucide-react";
+import { CalendarBlank, Clipboard, GraduationCap, HandHeart, Translate, SquaresFour, Users } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import { skillsData } from "../../data/skills";
 import { useViewMode } from "../../lib/view-mode";
@@ -14,12 +14,12 @@ import {
 
 const iconMap = {
   "Leadership & Communication": <Users size={22} className="text-[#2563EB]" />,
-  "Project Coordination": <CalendarDays size={22} className="text-[#2563EB]" />,
-  "Operations & Documentation": <ClipboardList size={22} className="text-[#2563EB]" />,
+  "Project Coordination": <CalendarBlank size={22} className="text-[#2563EB]" />,
+  "Operations & Documentation": <Clipboard size={22} className="text-[#2563EB]" />,
   "Learning & Development": <GraduationCap size={22} className="text-[#2563EB]" />,
-  "People & Stakeholder Management": <HeartHandshake size={22} className="text-[#2563EB]" />,
-  Tools: <LayoutGrid size={22} className="text-[#2563EB]" />,
-  Languages: <Languages size={22} className="text-[#2563EB]" />
+  "People & Stakeholder Management": <HandHeart size={22} className="text-[#2563EB]" />,
+  Tools: <SquaresFour size={22} className="text-[#2563EB]" />,
+  Languages: <Translate size={22} className="text-[#2563EB]" />
 };
 
 const descMap = {

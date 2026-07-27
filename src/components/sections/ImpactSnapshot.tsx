@@ -1,4 +1,4 @@
-import { Award, ClipboardCheck, Trophy, Users } from "lucide-react";
+import { Medal, ClipboardText, Trophy, Users } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
 import { useViewMode } from "../../lib/view-mode";
@@ -23,12 +23,12 @@ const impactItems = {
       text: "Maintained 85% active participation after a structured member intake for a 50-member athletics club."
     },
     {
-      icon: Award,
+      icon: Medal,
       title: "Individual Top 5 of 25",
       text: "Delivered a high-pressure strategic turnaround as acting lead in the grand final, finishing as the stronger of 2 finalist teams."
     },
     {
-      icon: ClipboardCheck,
+      icon: ClipboardText,
       title: "Weekly Reporting — Active",
       text: "Delivering structured stakeholder reporting across 2 concurrent paid teaching roles with 2 supervisors."
     }
@@ -45,12 +45,12 @@ const impactItems = {
       text: "Onboarded 15 of 37 applicants through a structured intake program, sustaining 85% active participation."
     },
     {
-      icon: Award,
+      icon: Medal,
       title: "Individual Top 5 of 25",
       text: "Coached a team through a mid-project crisis and delivered an inspiring closing speech, earning individual recognition for performance and influence."
     },
     {
-      icon: ClipboardCheck,
+      icon: ClipboardText,
       title: "Weekly Reporting — Active",
       text: "Designing structured lessons, diagnosing comprehension gaps, and coaching learners across 2 concurrent teaching roles."
     }

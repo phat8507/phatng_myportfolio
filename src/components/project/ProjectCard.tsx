@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Medal, Folder, LayoutGrid, Users } from "lucide-react";
+import { ArrowRight, ArrowSquareOut, SealCheck, Folder, SquaresFour, Users, MagnifyingGlass } from "@phosphor-icons/react";
 import type { ProjectData } from "../../data/projects";
 import { cn } from "../../lib/utils";
 import { SignInCardBeamEffect } from "../effects/SignInCardBeamEffect";
@@ -12,17 +12,12 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   // Simple category icon mapping
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "research": return <SearchIcon />;
-      case "event": return <LayoutGrid size={16} />;
+      case "research": return <MagnifyingGlass size={16} />;
+      case "event": return <SquaresFour size={16} />;
       case "leadership": return <Users size={16} />;
       default: return <Folder size={16} />;
     }
   };
-
-  // Helper local search icon since lucide-react Search is standard
-  const SearchIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-  );
 
   return (
     <SignInCardBeamEffect
@@ -45,7 +40,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
           {project.medal && (
             <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#FFFBF0] text-[#D97706] text-[0.7rem] font-bold tracking-wide border border-[#FDE68A] shadow-sm shrink-0">
-              <Medal size={14} />
+              <SealCheck size={14} />
               <span>{project.medal.replace('🥉 ', '')}</span>
             </div>
           )}
@@ -106,7 +101,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
                   className="project-link-row motion-button"
                 >
                   <span className="project-link-label">{link.label}</span>
-                  <ExternalLink size={12} className="project-link-icon" />
+                  <ArrowSquareOut size={12} className="project-link-icon" />
                 </a>
               ))}
             </div>

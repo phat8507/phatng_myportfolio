@@ -1,17 +1,17 @@
 import {
   ArrowRight,
-  Download,
-  Mail,
+  DownloadSimple,
+  Envelope,
   Users,
   Calendar,
   Globe,
   BookOpen,
-  ClipboardList,
+  Clipboard,
   Trophy,
   GraduationCap,
-  HeartHandshake,
+  HandHeart,
   Briefcase
-} from "lucide-react";
+} from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 import type { MouseEvent } from "react";
 import { profileData } from "../../data/profile";
@@ -44,16 +44,16 @@ export function Hero() {
   const getTagIcon = (tag: string) => {
     switch (tag) {
       case "Project Coordination": return <Users size={14} />;
-      case "Project Management": return <ClipboardList size={14} />;
+      case "Project Management": return <Clipboard size={14} />;
       case "Team Leadership": return <Users size={14} />;
-      case "Operations": return <ClipboardList size={14} />;
+      case "Operations": return <Clipboard size={14} />;
       case "Agile/Scrum": return <BookOpen size={14} />;
       case "Event Logistics": return <Calendar size={14} />;
       case "Learning & Development": return <GraduationCap size={14} />;
       case "Talent Development": return <GraduationCap size={14} />;
-      case "Coaching & Mentoring": return <HeartHandshake size={14} />;
+      case "Coaching & Mentoring": return <HandHeart size={14} />;
       case "HR Management": return <Briefcase size={14} />;
-      case "People Operations": return <ClipboardList size={14} />;
+      case "People Operations": return <Clipboard size={14} />;
       default: return null;
     }
   };
@@ -65,7 +65,7 @@ export function Hero() {
       case "Score": return <Trophy size={iconSize} className="text-[#2563EB]" />;
       case "Participation": return <Users size={iconSize} className="text-[#2563EB]" />;
       case "Scale": return <Users size={iconSize} className="text-[#2563EB]" />;
-      case "Coached": return <HeartHandshake size={iconSize} className="text-[#2563EB]" />;
+      case "Coached": return <HandHeart size={iconSize} className="text-[#2563EB]" />;
       case "English": return <Globe size={iconSize} className="text-[#2563EB]" />;
       default: return null;
     }
@@ -137,7 +137,7 @@ export function Hero() {
                 align="left"
                 className="motion-button inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[rgba(255,255,255,0.82)] border border-[rgba(255,255,255,0.74)] backdrop-blur-sm text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(15,42,74,0.06),inset_0_1.5px_0_rgba(255,255,255,0.92)] active:translate-y-0"
               >
-                <Download size={16} />
+                <DownloadSimple size={16} />
                 Download CV
               </CvDownloadMenu>
 
@@ -145,7 +145,7 @@ export function Hero() {
                 href="#contact"
                 className="motion-button inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-[rgba(255,255,255,0.82)] border border-[rgba(255,255,255,0.74)] backdrop-blur-sm text-[0.88rem] font-bold text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(15,42,74,0.06),inset_0_1.5px_0_rgba(255,255,255,0.92)] active:translate-y-0"
               >
-                <Mail size={16} />
+                <Envelope size={16} />
                 Contact Me
               </a>
             </motion.div>

@@ -1,5 +1,5 @@
 import type { AnchorHTMLAttributes, HTMLAttributes } from "react";
-import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
+import { CaretLeft, CaretRight, DotsThree } from "@phosphor-icons/react";
 import { cn } from "../../lib/utils";
 
 function Pagination({ className, ...props }: HTMLAttributes<HTMLElement>) {
@@ -60,7 +60,7 @@ function PaginationPrevious({ className, ...props }: AnchorHTMLAttributes<HTMLAn
       className={cn("gap-1.5 px-3.5", className)}
       {...props}
     >
-      <ChevronLeft size={15} />
+      <CaretLeft size={15} />
       <span>Previous</span>
     </PaginationLink>
   );
@@ -74,7 +74,7 @@ function PaginationNext({ className, ...props }: AnchorHTMLAttributes<HTMLAnchor
       {...props}
     >
       <span>Next</span>
-      <ChevronRight size={15} />
+      <CaretRight size={15} />
     </PaginationLink>
   );
 }
@@ -86,7 +86,7 @@ function PaginationEllipsis({ className, ...props }: HTMLAttributes<HTMLSpanElem
       className={cn("inline-flex h-9 min-w-9 items-center justify-center text-[#5B6B82]", className)}
       {...props}
     >
-      <MoreHorizontal size={16} />
+      <DotsThree size={16} />
       <span className="sr-only">More pages</span>
     </span>
   );

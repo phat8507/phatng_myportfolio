@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Download, Menu, X } from "lucide-react";
+import { DownloadSimple, List, X } from "@phosphor-icons/react";
 import { cn } from "../../lib/utils";
 import { CvDownloadMenu } from "./CvDownloadMenu";
 import { ViewModeToggle } from "./ViewModeToggle";
@@ -95,7 +95,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
                 align="right"
                 className="motion-button inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#0F2A4A] text-white text-[0.78rem] font-bold transition-all hover:bg-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20 whitespace-nowrap"
               >
-                <Download size={14} />
+                <DownloadSimple size={14} />
                 <span>Download CV</span>
               </CvDownloadMenu>
 
@@ -105,7 +105,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
                 className="navbar-command-button motion-button flex items-center justify-center w-10 h-10 rounded-full border border-[#D8E1EC] bg-white text-[#0B1220] transition-all hover:border-[#2563EB] hover:text-[#2563EB] shrink-0"
                 aria-label="Open command menu"
               >
-                <Menu size={18} />
+                <List size={18} />
               </button>
             </div>
           </div>
@@ -116,7 +116,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileMenuOpen ? <X size={20} /> : <List size={20} />}
           </button>
           </div>
         </div>
@@ -151,7 +151,7 @@ export function Navbar({ onOpenCommand }: NavbarProps) {
               onSelect={() => setMobileMenuOpen(false)}
               className="motion-button flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#0F2A4A] text-white font-bold"
             >
-              <Download size={18} /> Download CV
+              <DownloadSimple size={18} /> Download CV
             </CvDownloadMenu>
           </div>
         </div>

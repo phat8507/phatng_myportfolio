@@ -177,7 +177,7 @@ export function Hero() {
                 style={{ transform: "rotate(1.5deg)" }}
               >
                 <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center font-display text-[0.84rem] font-bold text-white shrink-0 shadow-md"
+                  className="w-9 h-9 rounded-[11px] flex items-center justify-center font-display text-[0.84rem] font-bold text-white shrink-0 shadow-md"
                   style={{ background: "linear-gradient(135deg, #0F2A4A, #2563EB)" }}
                 >
                   PN

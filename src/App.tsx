@@ -60,10 +60,15 @@ function App() {
         <AdminPage />
       ) : (
         <>
+          <a href="#main-content" className="skip-to-content">
+            Skip to content
+          </a>
+
           <ScrollProgress />
           <Navbar onOpenCommand={() => setCommandOpen(true)} />
 
           <motion.main
+            id="main-content"
             initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
